@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Source+Serif+Pro&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    * {
+        user-select: none;
+    }
+
+    img {
+        pointer-events: none;
+    }
+
+    .custom-image-shadow {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .custom-tag-name, .custom-rating{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .custom-nav-icon {
+        @apply text-light hover:text-light-hovered active:text-light-clicked;
+        size: 28;
+    }
+
+    .custom-header-button {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        @apply text-light hover:text-light-hovered active:text-light-clicked;
+    }
+
+    .custom-header {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 39px;
+    }
+
+    .custom-footer {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .custom-skill-card {
+        width: 130px;
+        height: 192px;
+    }
+
+    .custom-skill-card-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .custom-skill-card-subtitle, .custom-card-date {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .custom-skill-card-logo {
+        width: 72px;
+        height: 72px;
+    }
+
+    .custom-date-separator {
+        /* width: 96px; */
+        min-width: 8px;
+        max-width: 96px;
+        height: 2px;
+    }
+
+    .custom-card-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .custom-card-subtitle {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .custom-card-subtitle-bold {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .custom-article-card {
+        height: 508px;
+        /* width: 640px; */
+    }
+
+    .custom-article-card-image {
+        height: 360px;
+    }
+
+    .custom-imagesource-text {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .custom-section-title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}
