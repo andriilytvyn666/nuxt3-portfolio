@@ -8,7 +8,7 @@
             <span class="text-light custom-card-title truncate">Foundations of User Experience (UX) Design</span>
             <div class="flex flex-col gap-1">
                 <span class="text-light-alt truncate custom-card-subtitle">Google Career Certificates</span>
-                <span class="text-light-alt truncate custom-card-subtitle-bold">Coursera • 16 hours • 2022</span>
+                <span class="text-light-alt truncate custom-card-subtitle-bold">September 2022</span>
             </div>
         </div>
     </div>

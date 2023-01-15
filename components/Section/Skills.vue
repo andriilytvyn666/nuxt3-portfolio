@@ -1,3 +1,6 @@
+
+import { ButtonAboutSkillLevels } from '~~/.nuxt/components';
+
 <template>
     <div class="flex flex-col gap-4">
         <span class="custom-section-title text-center">Skills</span>
@@ -20,7 +23,7 @@
             </div>
         </div>
         <div class="flex flex-row justify-between">
-            <ButtonAboutRating />
+            <ButtonAboutSkillLevels />
             <ButtonShowMore />
         </div>
 
