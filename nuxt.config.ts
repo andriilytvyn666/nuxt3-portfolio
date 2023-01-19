@@ -1,11 +1,45 @@
+import en from './locales/en-US.json'
+import uk from './locales/uk-UA.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: [
-        '@nuxtjs/tailwindcss',
-        'nuxt-icon',
-        'nuxt-swiper'
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-icon',
+    'nuxt-swiper',
+    '@nuxtjs/i18n'
+  ],
+  css: [
+    "~/assets/css/tailwind.css",
+  ],
+  i18n: {
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      alwaysRedirect: true,
+      fallbackLocale: 'en',
+      useCookie: false,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    },
+    locales: [
+      {
+        name: "English",
+        iso: "en-US",
+        code: "en",
+        isCatchallLocale: true
+      },
+      {
+        name: "Українська",
+        iso: "uk-UA",
+        code: "uk"
+      }
     ],
-    css: [
-        "~/assets/css/tailwind.css",
-    ]
+    vueI18n: {
+      legacy: false,
+      locale: 'en',
+      fallbackLocale: 'en',
+      availableLocales: ['en', 'uk'],
+      messages: { en, uk }
+    }
+  }
 })
