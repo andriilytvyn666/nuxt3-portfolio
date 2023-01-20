@@ -9,31 +9,30 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ['Poppins', 'sans-serif'],
-      serif: ['Source Serif Pro', 'serif'],
+      sans: 'Inter, sans-serif',
     },
     colors: {
-      dark: {
-        DEFAULT: "#161616",
-        hovered: "#212121",
-        clicked: "#1D1D1D"
-      },
       light: {
-        DEFAULT: "#DEDEDE",
-        hovered: "#A9A9A9",
-        clicked: "#7E7E7E",
-        alt: "#A9A9A9",
+        DEFAULT: "#FFFFFF",
+        unfocused: "#888888",
       },
-      card: {
-        DEFAULT: "#323232",
-        hovered: "#484848",
+      dark: {
+        DEFAULT: "#000000",
+        hover: "#101010",
+        click: "#333333",
+        header: "rgba(0, 0, 0, 0.85)",
       },
-      imagesource: {
-        DEFAULT: "rgba(0, 0, 0, 0.7)",
-        insivible: "rgba(0, 0, 0, 0)"
+    },
+    extend: {
+      backgroundImage: {
+        'grad-red': 'linear-gradient(95.41deg, #882B2B 0%, #992626 100%)',
+        'grad-red-hover': 'linear-gradient(95.41deg, #934040 0%, #A33B3B 100%)',
+        'grad-red-click': 'linear-gradient(95.41deg, #511919 0%, #5B1616 100%)',
+        'grad-blue': 'linear-gradient(95.41deg, #2B4B88 0%, #266299 100%)',
+        'grad-blue-hover': 'linear-gradient(95.41deg, #405D93 0%, #3B71A3 100%)',
+        'grad-blue-click': 'linear-gradient(95.41deg, #192D51 0%, #163A5B 100%)',
       }
     },
-    extend: {},
   },
   plugins: [],
 }
