@@ -5,9 +5,9 @@ import uk from './locales/uk-UA.json'
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-icon',
     'nuxt-swiper',
-    '@nuxtjs/i18n'
+    'nuxt-icons',
+    '@nuxtjs/i18n',
   ],
   css: [
     "~/assets/css/tailwind.css",

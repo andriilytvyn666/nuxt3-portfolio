@@ -10,10 +10,10 @@
   "devDependencies": {
     "@nuxtjs/i18n": "^8.0.0-beta.7",
     "@nuxtjs/tailwindcss": "^6.2.0",
-    "nuxt": "^3.0.0",
-    "nuxt-icon": "^0.2.5"
+    "nuxt": "^3.0.0"
   },
   "dependencies": {
+    "nuxt-icons": "^3.0.0",
     "nuxt-swiper": "^0.1.9"
   }
 }

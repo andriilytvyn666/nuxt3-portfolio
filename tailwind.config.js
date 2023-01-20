@@ -21,6 +21,7 @@ module.exports = {
         hover: "#101010",
         click: "#333333",
         header: "rgba(0, 0, 0, 0.85)",
+        footer: "#111111",
       },
     },
     extend: {

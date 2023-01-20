@@ -1,9 +1,38 @@
 <template>
-    <header class="flex flex-row content-between gap-3 items-center justify-between bg-dark text-light pr-2">
-        <div class="flex flex-row items-center my-8">
-            <Icon name="ion:accessibility" class="mr-3" size="36" />
-            <span class="custom-header">Andrii Lytvyn's Portfolio</span>
+    <header ref="headerRef"
+        class="h-16 w-fill bg-dark-header sticky top-0 z-50 backdrop-blur box-content border-b-dark-click">
+        <div class="flex justify-between pr-1 items-center h-full content-center mx-auto w-[1180px]">
+            <div class="text-light flex items-center gap-2 text-[26.5px] font-bold">
+                <nuxt-icon class="text-[26.5px]" name="feather/user" filled />
+                <span>Portfolio</span>
+            </div>
+            <nav class="flex text-light gap-4 text-[32px]">
+                <nuxt-icon name="header/at-circle" filled />
+                <nuxt-icon name="header/logo-github" filled />
+                <nuxt-icon name="header/logo-linkedin" filled />
+                <nuxt-icon name="header/logo-behance" filled />
+            </nav>
         </div>
-        <GroupIconButtonsPortfolio />
     </header>
 </template>
+
+<script setup lang="ts">
+const headerRef = ref<HTMLDivElement | null>(null)
+
+const handleScroll = () => {
+    if (window.scrollY === 0) {
+        headerRef.value?.classList.remove('border-b')
+    } else {
+        headerRef.value?.classList.add('border-b')
+    }
+}
+
+if (process.client) {
+    onBeforeMount(() => {
+        window.addEventListener('scroll', handleScroll)
+    })
+    onBeforeUnmount(() => {
+        window.removeEventListener('scroll', handleScroll)
+    })
+}
+</script>

@@ -1,8 +1,14 @@
 <template>
     <PageWrapper>
         <div class="flex flex-col gap-4">
-            <!-- <SectionAboutMe />
-            <SectionSkills /> -->
+            <SectionAboutMe />
+            <SectionAboutMe />
+            <SectionAboutMe />
+            <SectionAboutMe />
+            <SectionAboutMe />
+            <SectionAboutMe />
+
+            <!-- <SectionSkills /> -->
         </div>
         <div class="flex flex-col gap-12">
             <!-- <SectionProjects />
@@ -12,9 +18,3 @@
         </div>
     </PageWrapper>
 </template>
-
-<style>
-body {
-    @apply bg-dark;
-}
-</style>
