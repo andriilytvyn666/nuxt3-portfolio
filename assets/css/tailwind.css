@@ -1,25 +1,41 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+  }
+
+  body {
+    @apply bg-dark;
+  }
+
+  img {
+    pointer-events: none;
+  }
+
+  .nuxt-icon svg {
+    margin-bottom: 0 !important;
+  }
+}
+
 @layer components {
+  .internal-button-primary {
+    @apply text-dark hover:text-light bg-light;
+    @apply hover:bg-grad-blue-hover active:bg-grad-blue-click hover:outline outline-1;
+  }
 
-    * {
-        user-select: none;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-smooth: never;
-    }
+  .internal-button-secondary {
+    @apply text-light bg-dark hover:bg-dark-hover active:bg-dark-click outline-dark-click hover:outline-light outline outline-1;
+  }
 
-    body {
-        @apply bg-dark;
-    }
-
-    img {
-        pointer-events: none;
-    }
+  .internal-button-close {
+    @apply text-light bg-grad-red hover:bg-grad-red-hover active:bg-grad-red-click outline outline-light outline-1;
+  }
 }
