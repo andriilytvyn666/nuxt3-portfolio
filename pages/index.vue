@@ -2,11 +2,11 @@
     <PageWrapper>
         <div class="flex flex-col gap-4">
             <SectionAboutMe />
+            <!-- <SectionAboutMe />
             <SectionAboutMe />
             <SectionAboutMe />
             <SectionAboutMe />
-            <SectionAboutMe />
-            <SectionAboutMe />
+            <SectionAboutMe /> -->
 
             <!-- <SectionSkills /> -->
         </div>

@@ -1,9 +1,9 @@
 <template>
     <header ref="headerRef"
         class="h-16 w-fill bg-dark-header sticky top-0 z-50 backdrop-blur box-content border-b-dark-click">
-        <div class="flex justify-between pr-1 items-center h-full content-center mx-auto w-[1180px]">
-            <div class="text-light flex items-center gap-2 text-[26.5px] font-bold">
-                <nuxt-icon class="text-[26.5px]" name="feather/user" filled />
+        <div class="px-1 flex justify-between items-center h-full content-center mx-auto w-[1180px]">
+            <div class="text-light flex items-center gap-2 text-[26.5px] leading-8 font-bold">
+                <nuxt-icon class="text-[32px] leading-8" name="feather/user" filled />
                 <span>Portfolio</span>
             </div>
             <nav class="flex text-light gap-4 text-[32px]">
