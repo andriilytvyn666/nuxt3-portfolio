@@ -5,7 +5,13 @@ import eslintPlugin from 'vite-plugin-eslint'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', 'nuxt-swiper', 'nuxt-icons', '@nuxtjs/i18n'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'nuxt-swiper',
+    'nuxt-icons',
+    '@nuxtjs/i18n',
+    '@nuxt/image-edge',
+  ],
   vite: {
     plugins: [eslintPlugin()],
   },
