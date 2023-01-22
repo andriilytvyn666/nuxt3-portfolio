@@ -1,6 +1,18 @@
 {
-    "blog": "Blog",
-    "name": "Andrii Lytvyn",
-    "about": "I’m third-year student of CS/AI at Lviv Polytechnic National University.\nI love to build beautiful and enjoyable user interfaces and designs.\nAt the moments I’m learning UI/UX design and Nuxt.js.",
-    "location": "Lviv, Ukraine"
+  "landing": {
+    "header": {
+      "logoTitle": "Portfolio"
+    },
+    "footer": {
+      "copyright": "Copyright © 2023 Andrii Lytvyn"
+    },
+    "aboutMe": {
+      "name": "Andrii Lytvyn",
+      "location": "Lviv, Ukraine",
+      "description": "I’m 3rd year CS/AI student.\nI like to create great designs and other things too.\nWeb development and UI/UX design are my main interests.",
+      "downloadCV": "Download CV",
+      "contactMe": "Contact Me",
+      "aboutSkillLevels": "About skill levels"
+    }
+  }
 }

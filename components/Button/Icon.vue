@@ -8,7 +8,6 @@
 const props = defineProps({
   icon: {
     type: String,
-    default: 'file',
     required: true,
   },
   type: {
@@ -25,21 +24,21 @@ const getClass = () => {
   switch (props.type) {
     case 'primary':
       return {
-        'custom-button-icon-primary': true,
-        'custom-button-icon-secondary': false,
-        'custom-button-icon-close': false,
+        'button-icon-primary': true,
+        'button-icon-secondary': false,
+        'button-icon-close': false,
       }
     case 'close':
       return {
-        'custom-button-icon-primary': false,
-        'custom-button-icon-secondary': false,
-        'custom-button-icon-close': true,
+        'button-icon-primary': false,
+        'button-icon-secondary': false,
+        'button-icon-close': true,
       }
     default:
       return {
-        'custom-button-icon-primary': false,
-        'custom-button-icon-secondary': true,
-        'custom-button-icon-close': false,
+        'button-icon-primary': false,
+        'button-icon-secondary': true,
+        'button-icon-close': false,
       }
   }
 }
@@ -51,16 +50,17 @@ const getClass = () => {
   @apply rounded-[0.313rem] text-base font-medium whitespace-nowrap;
 }
 
-.custom-button-icon-primary {
+.button-icon-primary {
   @apply internal-button-icon internal-button-primary;
 }
 
-.custom-button-icon-secondary {
+.button-icon-secondary {
   @apply internal-button-icon internal-button-secondary;
-  @apply hover:bg-grad-blue-click active:bg-grad-blue-hover hover:outline-light;
+  @apply hover:bg-grad-blue-click hover:outline-light;
+  @apply active:bg-grad-blue-hover;
 }
 
-.custom-button-icon-close {
+.button-icon-close {
   @apply internal-button-icon internal-button-close;
 }
 </style>

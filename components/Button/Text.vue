@@ -9,12 +9,10 @@
 const props = defineProps({
   text: {
     type: String,
-    default: 'Default',
     required: true,
   },
   icon: {
     type: String,
-    default: 'feather/file',
     required: true,
   },
   type: {
@@ -23,7 +21,6 @@ const props = defineProps({
       return ['primary', 'secondary', 'close'].includes(value)
     },
     default: 'secondary',
-    required: true,
   },
 })
 
@@ -31,21 +28,21 @@ const getClass = () => {
   switch (props.type) {
     case 'primary':
       return {
-        'custom-button-text-primary': true,
-        'custom-button-text-secondary': false,
-        'custom-button-text-close': false,
+        'button-text-primary': true,
+        'button-text-secondary': false,
+        'button-text-close': false,
       }
     case 'close':
       return {
-        'custom-button-text-primary': false,
-        'custom-button-text-secondary': false,
-        'custom-button-text-close': true,
+        'button-text-primary': false,
+        'button-text-secondary': false,
+        'button-text-close': true,
       }
     default:
       return {
-        'custom-button-text-primary': false,
-        'custom-button-text-secondary': true,
-        'custom-button-text-close': false,
+        'button-text-primary': false,
+        'button-text-secondary': true,
+        'button-text-close': false,
       }
   }
 }
@@ -53,19 +50,19 @@ const getClass = () => {
 
 <style lang="postcss">
 .internal-button-text {
-  @apply flex gap-2 pl-5 pr-[1.125rem] max-w-min py-3 items-center;
+  @apply flex gap-2 pr-5 pl-[1.125rem] max-w-min max-h-12 items-center;
   @apply rounded-[0.313rem] text-base font-medium whitespace-nowrap;
 }
 
-.custom-button-text-primary {
+.button-text-primary {
   @apply internal-button-text internal-button-primary;
 }
 
-.custom-button-text-secondary {
+.button-text-secondary {
   @apply internal-button-text internal-button-secondary;
 }
 
-.custom-button-text-close {
+.button-text-close {
   @apply internal-button-text internal-button-close;
 }
 </style>

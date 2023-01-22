@@ -27,15 +27,24 @@
 
 @layer components {
   .internal-button-primary {
-    @apply text-dark hover:text-light bg-light;
-    @apply hover:bg-grad-blue-hover active:bg-grad-blue-click hover:outline outline-1;
+    @apply cursor-pointer;
+    @apply text-dark hover:text-light;
+    @apply bg-light;
+    @apply hover:bg-grad-blue-hover active:bg-grad-blue-click;
+    @apply border border-light;
   }
 
   .internal-button-secondary {
-    @apply text-light bg-dark hover:bg-dark-hover active:bg-dark-click outline-dark-click hover:outline-light outline outline-1;
+    @apply cursor-pointer;
+    @apply text-light-unfocused hover:text-light;
+    @apply bg-dark hover:bg-dark-hover active:bg-dark-click;
+    @apply border border-dark-click hover:border-light;
   }
 
   .internal-button-close {
-    @apply text-light bg-grad-red hover:bg-grad-red-hover active:bg-grad-red-click outline outline-light outline-1;
+    @apply cursor-pointer;
+    @apply text-light;
+    @apply bg-grad-red hover:bg-grad-red-hover active:bg-grad-red-click;
+    @apply border border-light;
   }
 }

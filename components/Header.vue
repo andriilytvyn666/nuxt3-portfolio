@@ -10,7 +10,7 @@
         class="text-light flex items-center gap-2 text-[1.656rem] leading-8 font-bold"
       >
         <nuxt-icon class="text-[2rem] leading-8" name="feather/user" filled />
-        <span>Portfolio</span>
+        <span>{{ $t('landing.header.logoTitle') }}</span>
       </div>
       <nav class="flex text-light gap-4 text-[2rem]">
         <nuxt-icon name="header/at-circle" filled />
