@@ -4,7 +4,7 @@
       "logoTitle": "Portfolio"
     },
     "footer": {
-      "copyright": "Copyright © 2023 Andrii Lytvyn"
+      "copyright": "Copyright © {year} Andrii Lytvyn"
     },
     "aboutMe": {
       "name": "Andrii Lytvyn",
@@ -13,6 +13,15 @@
       "downloadCV": "Download CV",
       "contactMe": "Contact Me",
       "aboutSkillLevels": "About skill levels"
+    },
+    "skills": {
+      "levels": {
+        "novice": "Novice",
+        "beginner": "Beginner",
+        "competent": "Competent",
+        "proficient": "Proficient",
+        "expert": "Expert"
+      }
     }
   }
 }

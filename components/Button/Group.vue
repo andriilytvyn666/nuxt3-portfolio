@@ -2,14 +2,14 @@
   <div class="button-group [&>div]:rounded-l-[0.313rem;">
     <div
       ref="buttonLeftRef"
-      class="button-group-left border-r bg-dark-hover"
+      class="border-r button-group-left bg-dark-hover"
       @click="onClickLeft"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </div>
     <div
       ref="buttonRightRef"
-      class="button-group-right cursor-pointer"
+      class="cursor-pointer button-group-right"
       @click="onClickRight"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
@@ -18,18 +18,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  iconLeft: {
-    type: String,
-    default: 'feather/file',
-    required: true,
-  },
-  iconRight: {
-    type: String,
-    default: 'feather/file',
-    required: true,
-  },
-})
+const props = defineProps<{
+  iconLeft: string
+  iconRight: string
+}>()
 
 const buttonLeftRef = ref()
 const buttonRightRef = ref()

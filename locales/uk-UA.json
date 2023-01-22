@@ -4,7 +4,7 @@
       "logoTitle": "Портфоліо"
     },
     "footer": {
-      "copyright": "Copyright © 2023 Андрій Литвин"
+      "copyright": "Copyright © {year} Андрій Литвин"
     },
     "aboutMe": {
       "name": "Андрій Литвин",
@@ -13,6 +13,15 @@
       "downloadCV": "Резюме",
       "contactMe": "Зв'язатися",
       "aboutSkillLevels": "Детальніше про рівні"
+    },
+    "skills": {
+      "levels": {
+        "novice": "Новачок",
+        "beginner": "Початківець",
+        "competent": "Компетентний",
+        "proficient": "Досвідчений",
+        "expert": "Експерт"
+      }
     }
   }
 }
