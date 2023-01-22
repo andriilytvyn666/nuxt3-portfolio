@@ -6,6 +6,7 @@
     >
       <div class="flex flex-col col-span-12">
         <slot />
+        <div class="h-16"></div>
       </div>
     </article>
     <Footer />

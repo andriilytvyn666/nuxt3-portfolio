@@ -1,8 +1,7 @@
 <template>
   <div class="flex gap-6 mt-6 text-xl font-medium text-light">
-    <img
-      src="~/assets/img/photo.png"
-      alt="Photo"
+    <nuxt-img
+      src="/img/photo.png"
       class="rounded-[0.313rem] max-w-min h-[16rem]"
     />
     <div class="flex flex-col justify-between flex-grow">
@@ -12,8 +11,8 @@
             $t('landing.aboutMe.name')
           }}</span>
           <span class="flex items-center gap-2 text-light-unfocused">
-            <img
-              src="~/assets/img/emojiFlagUkraine.png"
+            <nuxt-img
+              src="/img/emojiFlagUkraine.png"
               alt="Ukraine Flag"
               class="h-6"
             />

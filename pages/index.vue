@@ -1,14 +1,10 @@
 <template>
   <PageWrapper>
-    <div class="flex flex-col gap-4">
-      <SectionAboutMe />
-      <!-- <SectionAboutMe />
-      <SectionAboutMe />
-      <SectionAboutMe />
-      <SectionAboutMe />
-      <SectionAboutMe />
-
-      <SectionSkills /> -->
+    <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-6">
+        <SectionAboutMe />
+        <SectionSkills />
+      </div>
     </div>
     <div class="flex flex-col gap-12">
       <!-- <SectionProjects />
