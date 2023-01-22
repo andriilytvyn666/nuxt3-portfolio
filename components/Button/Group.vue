@@ -1,17 +1,15 @@
 <template>
-  <div
-    class="button-group [&>div]:border-dark-click rounded-[0.313rem] [&>div]:rounded-l-[0.313rem;"
-  >
+  <div class="button-group [&>div]:rounded-l-[0.313rem;">
     <div
       ref="buttonLeftRef"
-      class="box-border flex items-center justify-center w-12 h-12 border-r bg-dark-hover text-light"
+      class="button-group-left border-r bg-dark-hover"
       @click="onClickLeft"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </div>
     <div
       ref="buttonRightRef"
-      class="flex items-center justify-center w-12 h-12 cursor-pointer"
+      class="button-group-right cursor-pointer"
       @click="onClickRight"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
@@ -57,8 +55,25 @@ const onClickRight = () => {
 
 <style lang="postcss">
 .button-group {
-  @apply flex flex-grow max-w-min justify-center items-center;
-  @apply outline outline-1 outline-dark-click text-light-unfocused;
-  @apply border-dark-click;
+  @apply flex flex-grow justify-center items-center;
+  @apply rounded-[0.313rem] max-w-min;
+  @apply text-light-unfocused;
+  @apply outline outline-1 outline-dark-click;
+}
+
+.button-group-shared {
+  @apply flex items-center justify-center;
+  @apply w-12 h-12;
+  @apply box-border border-dark-click;
+}
+
+.button-group-left {
+  @apply button-group-shared;
+  @apply text-light  hover:bg-dark-hover;
+}
+
+.button-group-right {
+  @apply button-group-shared;
+  @apply hover:text-light;
 }
 </style>

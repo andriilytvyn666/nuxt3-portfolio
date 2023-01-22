@@ -38,7 +38,7 @@
     @apply cursor-pointer;
     @apply text-light-unfocused hover:text-light;
     @apply bg-dark hover:bg-dark-hover active:bg-dark-click;
-    @apply border border-dark-click hover:border-light;
+    @apply border border-dark-border hover:border-light;
   }
 
   .internal-button-close {

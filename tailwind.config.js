@@ -19,7 +19,8 @@ module.exports = {
       dark: {
         DEFAULT: '#000000',
         hover: '#101010',
-        click: '#333333',
+        click: '#222222',
+        border: '#333333',
         header: 'rgba(0, 0, 0, 0.85)',
         footer: '#111111',
       },
