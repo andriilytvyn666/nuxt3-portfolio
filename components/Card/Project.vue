@@ -34,6 +34,6 @@ const props = defineProps<{
 
 .card-project-bottom {
   @apply max-h-[4.438rem] py-[0.594rem] px-[0.875rem];
-  @apply flex items-center justify-between gap-0;
+  @apply flex items-center justify-between gap-2;
 }
 </style>
