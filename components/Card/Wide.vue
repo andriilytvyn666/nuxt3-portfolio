@@ -14,7 +14,7 @@
         }}</span>
       </div>
     </div>
-    <div class="flex gap-3">
+    <div class="flex gap-3 [&>div]:shrink-0">
       <slot />
     </div>
   </div>

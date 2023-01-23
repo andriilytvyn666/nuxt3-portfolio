@@ -6,14 +6,10 @@
           <SectionAboutMe />
           <SectionSkills />
         </div>
+        <SectionProjects />
         <SectionExperience />
         <SectionCourses />
         <SectionEducation />
-        <!-- <button
-          class="px-4 py-2 border rounded-md text-light w-min whitespace-nowrap border-dark-border"
-        >
-          Click Me!
-        </button> -->
       </div>
     </div>
   </PageWrapper>
