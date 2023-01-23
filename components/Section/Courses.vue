@@ -1,9 +1,15 @@
 <template>
-    <div class="flex flex-col gap-4">
-        <span class="custom-section-title text-center">{{ "Certificates" }}</span>
-        <div id="skills-container"
-            class="grid grid-cols-2 gap-x-5 gap-y-5">
-            <ContainerCard v-for="i in 5" />
-        </div>
+  <div class="flex flex-col gap-3">
+    <SectionTitle icon="feather/check-square" title="Courses" />
+    <div class="grid grid-cols-2 gap-5">
+      <CardWideAction
+        title="Programming with JavaScript"
+        text="Coursera/Meta ‧ December 2022"
+        actionIcon="feather/file"
+        logo="/img/card/coursera.png"
+        v-for="i in 4"
+        :key="i"
+      />
     </div>
+  </div>
 </template>
