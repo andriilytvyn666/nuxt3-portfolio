@@ -4,7 +4,7 @@
       <nuxt-img :src="props.image" class="w-16 h-16" alt="skillNuxt" />
       <div class="flex flex-col gap-1 pb-1 text-center text-light">
         <span class="text-xl font-bold leading-6">Nuxt 3</span>
-        <span class="text-base font-medium leading-5">{{
+        <span class="text-sm font-medium leading-5 text-light-unfocused">{{
           $t(`landing.skills.levels.${props.level}`)
         }}</span>
       </div>
