@@ -36,8 +36,12 @@
       class="w-full"
       :slides-per-view="8"
       :space-between="20"
-      :modules="[SwiperNavigation, SwiperVirtual, SwiperAutoplay]"
-      :autoplay="{ delay: 1000, disableOnInteraction: false }"
+      :modules="[SwiperAutoplay]"
+      :autoplay="{
+        delay: 1000,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+      }"
       :loop="true"
     >
       <SwiperSlide v-for="i in 3" :key="i">
