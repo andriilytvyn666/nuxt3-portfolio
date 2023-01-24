@@ -18,16 +18,22 @@
 </template>
 
 <script setup lang="ts">
+import { useLandingStore } from '~~/stores/landing'
+
 const props = defineProps<{
   iconLeft: string
   iconRight: string
 }>()
 
+const store = useLandingStore()
+
 const buttonLeftRef = ref()
 const buttonRightRef = ref()
 const buttonBgClass = 'bg-dark-hover'
 
+// TODO: use conditional rendering instead
 const onClickLeft = () => {
+  store.displayCards()
   buttonRightRef.value.classList.remove(buttonBgClass)
   buttonLeftRef.value.classList.add(buttonBgClass)
   buttonLeftRef.value.classList.remove('cursor-pointer')
@@ -36,6 +42,7 @@ const onClickLeft = () => {
   buttonLeftRef.value.classList.add('text-light')
 }
 const onClickRight = () => {
+  store.displayGrid()
   buttonLeftRef.value.classList.remove(buttonBgClass)
   buttonRightRef.value.classList.add(buttonBgClass)
   buttonRightRef.value.classList.remove('cursor-pointer')

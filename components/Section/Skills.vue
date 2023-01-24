@@ -1,5 +1,37 @@
 <template>
-  <div class="flex flex-col gap-4">
+  <div class="grid grid-cols-8 gap-5" v-if="props.grid">
+    <CardSkill
+      v-for="i in 3"
+      :key="i"
+      image="/img/skillNuxt.png"
+      level="novice"
+    />
+    <CardSkill
+      v-for="i in 3"
+      :key="i"
+      image="/img/skillNuxt.png"
+      level="beginner"
+    />
+    <CardSkill
+      v-for="i in 3"
+      :key="i"
+      image="/img/skillNuxt.png"
+      level="competent"
+    />
+    <CardSkill
+      v-for="i in 3"
+      :key="i"
+      image="/img/skillNuxt.png"
+      level="proficient"
+    />
+    <CardSkill
+      v-for="i in 3"
+      :key="i"
+      image="/img/skillNuxt.png"
+      level="expert"
+    />
+  </div>
+  <div class="flex flex-col" v-else>
     <Swiper
       class="w-full"
       :slides-per-view="8"
@@ -11,7 +43,6 @@
       <SwiperSlide v-for="i in 3" :key="i">
         <CardSkill image="/img/skillNuxt.png" level="novice" />
       </SwiperSlide>
-
       <SwiperSlide v-for="i in 3" :key="i">
         <CardSkill image="/img/skillNuxt.png" level="beginner" />
       </SwiperSlide>
@@ -27,3 +58,9 @@
     </Swiper>
   </div>
 </template>
+
+<script setup lang="ts">
+const props = defineProps<{
+  grid: boolean
+}>()
+</script>

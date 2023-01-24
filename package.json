@@ -22,7 +22,12 @@
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-27907872.f4dd19d",
+    "@pinia/nuxt": "^0.4.6",
     "nuxt-icons": "^3.1.0",
-    "nuxt-swiper": "^0.1.9"
+    "nuxt-swiper": "^0.1.9",
+    "pinia": "^2.0.29"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div :class="getClass()">
+  <div @click="$emit('click')" :class="getClass()">
     <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
     <span>{{ props.text }}</span>
   </div>
@@ -23,6 +23,8 @@ const props = defineProps({
     default: 'secondary',
   },
 })
+
+defineEmits(['click'])
 
 const getClass = () => {
   switch (props.type) {

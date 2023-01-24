@@ -25,7 +25,7 @@
           </p>
         </div>
       </div>
-      <div class="flex flex-row">
+      <div class="flex flex-row min-h-[3rem]">
         <div class="flex gap-4">
           <ButtonText
             :text="$t('landing.aboutMe.downloadCV')"
@@ -33,12 +33,21 @@
           />
           <ButtonText
             :text="$t('landing.aboutMe.contactMe')"
+            icon="feather/x"
+            type="close"
+            @click="store.closeContacts"
+            v-if="props.contacts"
+          />
+          <ButtonText
+            :text="$t('landing.aboutMe.contactMe')"
             icon="feather/message-circle"
             type="primary"
+            @click="store.openContacts"
+            v-else
           />
         </div>
         <div class="grow"></div>
-        <div class="flex gap-4">
+        <div class="flex gap-4" v-if="!store.contactsOpen">
           <ButtonText
             :text="$t('landing.aboutMe.aboutSkillLevels')"
             icon="feather/info"
@@ -49,3 +58,13 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { useLandingStore } from '~~/stores/landing'
+
+const props = defineProps<{
+  contacts: boolean
+}>()
+
+const store = useLandingStore()
+</script>

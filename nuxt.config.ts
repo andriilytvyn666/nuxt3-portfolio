@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     'nuxt-icons',
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
+    '@pinia/nuxt',
   ],
   vite: {
     plugins: [eslintPlugin()],
