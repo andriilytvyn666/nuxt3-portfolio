@@ -3,23 +3,26 @@
     <div
       class="border-r button-group-shared bg-dark hover:text-light"
       @click="store.displayCards"
-      v-if="store.grid"
+      v-show="store.grid"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </div>
-    <div class="border-r button-group-shared bg-dark-hover text-light" v-else>
+    <div
+      class="border-r button-group-shared bg-dark-hover text-light"
+      v-show="!store.grid"
+    >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </div>
     <div
       class="cursor-pointer button-group-shared bg-dark-hover text-light"
-      v-if="store.grid"
+      v-show="store.grid"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
     </div>
     <div
       class="cursor-pointer button-group-shared hover:text-light"
       @click="store.displayGrid"
-      v-else
+      v-show="!store.grid"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
     </div>

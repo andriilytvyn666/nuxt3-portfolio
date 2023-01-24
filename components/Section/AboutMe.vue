@@ -36,14 +36,14 @@
             icon="feather/x"
             type="close"
             @click="store.closeContacts"
-            v-if="props.contacts"
+            v-show="props.contacts"
           />
           <ButtonText
             :text="$t('landing.aboutMe.contactMe')"
             icon="feather/message-circle"
             type="primary"
             @click="store.openContacts"
-            v-else
+            v-show="!props.contacts"
           />
         </div>
         <div class="grow"></div>

@@ -4,8 +4,8 @@
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-6">
           <SectionAboutMe :contacts="store.contactsOpen" />
-          <SectionContacts v-if="store.contactsOpen" />
-          <SectionSkills :grid="store.grid" v-else />
+          <SectionContacts v-show="store.contactsOpen" />
+          <SectionSkills :grid="store.grid" v-show="!store.contactsOpen" />
         </div>
         <SectionProjects />
         <SectionExperience />
