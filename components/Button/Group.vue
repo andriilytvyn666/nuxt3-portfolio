@@ -1,16 +1,25 @@
 <template>
   <div class="button-group [&>div]:rounded-l-[0.313rem;">
     <div
-      ref="buttonLeftRef"
-      class="border-r button-group-left bg-dark-hover"
-      @click="onClickLeft"
+      class="border-r button-group-shared bg-dark hover:text-light"
+      @click="store.displayCards"
+      v-if="store.grid"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </div>
+    <div class="border-r button-group-shared bg-dark-hover text-light" v-else>
+      <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
+    </div>
     <div
-      ref="buttonRightRef"
-      class="cursor-pointer button-group-right"
-      @click="onClickRight"
+      class="cursor-pointer button-group-shared bg-dark-hover text-light"
+      v-if="store.grid"
+    >
+      <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
+    </div>
+    <div
+      class="cursor-pointer button-group-shared hover:text-light"
+      @click="store.displayGrid"
+      v-else
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
     </div>
@@ -26,30 +35,6 @@ const props = defineProps<{
 }>()
 
 const store = useLandingStore()
-
-const buttonLeftRef = ref()
-const buttonRightRef = ref()
-const buttonBgClass = 'bg-dark-hover'
-
-// TODO: use conditional rendering instead
-const onClickLeft = () => {
-  store.displayCards()
-  buttonRightRef.value.classList.remove(buttonBgClass)
-  buttonLeftRef.value.classList.add(buttonBgClass)
-  buttonLeftRef.value.classList.remove('cursor-pointer')
-  buttonRightRef.value.classList.add('cursor-pointer')
-  buttonRightRef.value.classList.remove('text-light')
-  buttonLeftRef.value.classList.add('text-light')
-}
-const onClickRight = () => {
-  store.displayGrid()
-  buttonLeftRef.value.classList.remove(buttonBgClass)
-  buttonRightRef.value.classList.add(buttonBgClass)
-  buttonRightRef.value.classList.remove('cursor-pointer')
-  buttonLeftRef.value.classList.add('cursor-pointer')
-  buttonLeftRef.value.classList.remove('text-light')
-  buttonRightRef.value.classList.add('text-light')
-}
 </script>
 
 <style lang="postcss">
@@ -64,15 +49,5 @@ const onClickRight = () => {
   @apply flex items-center justify-center;
   @apply w-12 h-12;
   @apply box-border border-dark-click;
-}
-
-.button-group-left {
-  @apply button-group-shared;
-  @apply text-light  hover:bg-dark-hover;
-}
-
-.button-group-right {
-  @apply button-group-shared;
-  @apply hover:text-light;
 }
 </style>
