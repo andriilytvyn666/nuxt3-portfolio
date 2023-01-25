@@ -20,6 +20,7 @@ module.exports = {
         DEFAULT: '#000000',
         hover: '#101010',
         click: '#222222',
+        icon: '#555555',
         border: '#333333',
         header: 'rgba(0, 0, 0, 0.85)',
         footer: '#111111',
