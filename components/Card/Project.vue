@@ -8,8 +8,7 @@
       <div class="flex flex-col overflow-hidden">
         <span class="text-xl truncate text-light">{{ props.title }}</span>
         <span class="text-base truncate text-light-unfocused">{{
-          $t(`landing.shared.months[${props.date.getMonth()}]`) +
-          ` ${props.date.getFullYear()}`
+          `${monthName} ${props.date.getFullYear()}`
         }}</span>
       </div>
       <ButtonIcon class="shrink-0" icon="feather/arrow-right" type="primary" />
@@ -22,6 +21,10 @@ const props = defineProps<{
   title: string
   date: Date
 }>()
+
+const { t } = useI18n()
+
+const monthName = t(`landing.shared.months[${props.date.getMonth()}]`)
 </script>
 
 <style lang="postcss">

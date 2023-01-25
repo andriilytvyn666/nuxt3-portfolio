@@ -5,14 +5,13 @@
       :title="$t('landing.shared.sectionNames.education')"
     />
     <div class="grid grid-cols-2 gap-5">
-      <CardWide
-        title="Lviv Polytechnic National University"
-        :text="`${$t(
-          'landing.shared.academicDegrees.bachelor'
-        )} ‧ CS(AI) ‧ 2020 - 2024`"
-        logo="/img/card/nulp.png"
-        v-for="i in 1"
-        :key="i"
+      <CardEducation
+        logo="nulp"
+        university="Lviv Polytechnic National University"
+        major="CS/AI"
+        :degree="`${$t('landing.shared.academicDegrees.bachelor')}`"
+        :start="new Date(2020, 0)"
+        :end="new Date(2024, 0)"
       />
     </div>
   </div>
