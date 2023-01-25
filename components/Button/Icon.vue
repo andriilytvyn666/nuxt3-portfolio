@@ -1,7 +1,7 @@
 <template>
-  <div :class="getClass()">
+  <button @click="$emit('click')" :class="getClass()">
     <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">
@@ -19,6 +19,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+defineEmits(['click'])
 
 const getClass = () => {
   switch (props.type) {

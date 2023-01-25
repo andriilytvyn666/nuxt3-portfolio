@@ -1,8 +1,8 @@
 <template>
-  <div @click="$emit('click')" :class="getClass()">
+  <button @click="$emit('click')" :class="getClass()">
     <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
     <span>{{ props.text }}</span>
-  </div>
+  </button>
 </template>
 
 <script setup land="ts">

@@ -13,10 +13,18 @@
         <span>{{ $t('landing.header.logoTitle') }}</span>
       </div>
       <nav class="text-light flex gap-4 text-[2rem]">
-        <nuxt-icon class="icon-link" name="header/at-circle" filled />
-        <nuxt-icon class="icon-link" name="header/logo-github" filled />
-        <nuxt-icon class="icon-link" name="header/logo-linkedin" filled />
-        <nuxt-icon class="icon-link" name="header/logo-behance" filled />
+        <button>
+          <nuxt-icon class="icon-link" name="header/at-circle" filled />
+        </button>
+        <button>
+          <nuxt-icon class="icon-link" name="header/logo-github" filled />
+        </button>
+        <button>
+          <nuxt-icon class="icon-link" name="header/logo-linkedin" filled />
+        </button>
+        <button>
+          <nuxt-icon class="icon-link" name="header/logo-behance" filled />
+        </button>
       </nav>
     </div>
   </header>
@@ -46,6 +54,5 @@ if (process.client) {
 <style lang="postcss">
 .icon-link {
   @apply hover:text-light-unfocused active:text-dark-icon;
-  @apply cursor-pointer;
 }
 </style>

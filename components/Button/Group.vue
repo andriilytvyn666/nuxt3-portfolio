@@ -1,31 +1,31 @@
 <template>
   <div class="button-group [&>div]:rounded-l-[0.313rem;">
-    <div
+    <button
       class="border-r button-group-shared bg-dark hover:text-light"
       @click="store.displayCards"
       v-show="store.grid"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
-    </div>
-    <div
+    </button>
+    <button
       class="border-r button-group-shared bg-dark-hover text-light"
       v-show="!store.grid"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
-    </div>
-    <div
+    </button>
+    <button
       class="cursor-pointer button-group-shared bg-dark-hover text-light"
       v-show="store.grid"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
-    </div>
-    <div
+    </button>
+    <button
       class="cursor-pointer button-group-shared hover:text-light"
       @click="store.displayGrid"
       v-show="!store.grid"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
-    </div>
+    </button>
   </div>
 </template>
 

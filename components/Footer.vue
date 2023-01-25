@@ -6,7 +6,7 @@
       class="w-[73.75rem] flex px-2 mx-auto justify-between items-center h-full"
     >
       <div class="flex flex-col text-sm text-light-unfocused">
-        <span>{{ `Copyright © 2023, ${$t('landing.aboutMe.name')}` }}</span>
+        <span>{{ `Copyright © 2023 ${$t('landing.aboutMe.name')}` }}</span>
         <a
           class="text-light-unfocused hover:text-light"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
