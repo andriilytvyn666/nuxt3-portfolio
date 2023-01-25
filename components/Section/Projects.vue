@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col gap-3">
-    <SectionTitle icon="feather/layers" title="Projects" />
+    <SectionTitle
+      icon="feather/layers"
+      :title="$t('landing.shared.sectionNames.projects')"
+    />
     <div class="grid grid-cols-4 gap-5">
       <CardProject
         v-for="i in 8"

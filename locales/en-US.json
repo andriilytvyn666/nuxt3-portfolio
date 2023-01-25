@@ -1,6 +1,12 @@
 {
   "landing": {
     "shared": {
+      "sectionNames": {
+        "projects": "Projects",
+        "experience": "Work Experience",
+        "courses": "Courses",
+        "education": "Education"
+      },
       "months": [
         "January",
         "February",
@@ -14,13 +20,13 @@
         "October",
         "November",
         "December"
-      ]
+      ],
+      "academicDegrees": {
+        "bachelor": "Bachelor"
+      }
     },
     "header": {
       "logoTitle": "Portfolio"
-    },
-    "footer": {
-      "copyright": "Copyright © {year} Andrii Lytvyn"
     },
     "aboutMe": {
       "name": "Andrii Lytvyn",

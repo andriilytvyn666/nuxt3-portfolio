@@ -1,6 +1,12 @@
 {
   "landing": {
     "shared": {
+      "sectionNames": {
+        "projects": "Проєкти",
+        "experience": "Досвід роботи",
+        "courses": "Курси",
+        "education": "Освіта"
+      },
       "months": [
         "Січень",
         "Лютий",
@@ -14,13 +20,13 @@
         "Жовтень",
         "Листопад",
         "Грудень"
-      ]
+      ],
+      "academicDegrees": {
+        "bachelor": "Бакалавр"
+      }
     },
     "header": {
       "logoTitle": "Портфоліо"
-    },
-    "footer": {
-      "copyright": "Copyright © {year} Андрій Литвин"
     },
     "aboutMe": {
       "name": "Андрій Литвин",
