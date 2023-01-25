@@ -33,6 +33,7 @@ const handleInput = (event: Event) => {
   @apply rounded-[0.313rem] overflow-hidden border border-dark-border;
   @apply max-w-[9.188rem];
   @apply flex relative items-center;
+  @apply hover:border-light;
 }
 
 .dropdown-select {

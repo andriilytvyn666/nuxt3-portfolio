@@ -23,6 +23,11 @@
   .nuxt-icon svg {
     margin-bottom: 0 !important;
   }
+
+  a {
+    @apply text-light;
+    @apply underline;
+  }
 }
 
 @layer components {
