@@ -1,9 +1,9 @@
 import { Rule } from 'sanity'
 
 export default {
-  name: 'course',
+  name: 'education',
   type: 'document',
-  title: 'Courses',
+  title: 'Education',
   fields: [
     {
       name: 'logo',
@@ -19,15 +19,27 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'provider',
+      name: 'major',
       type: 'string',
-      title: 'Provider',
+      title: 'Major',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'completionDate',
+      name: 'degree',
+      type: 'string',
+      title: 'Degree',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'startDate',
       type: 'date',
-      title: 'Completion Date',
+      title: 'Start Date',
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'endDate',
+      type: 'date',
+      title: 'End Date',
       validation: (rule: Rule) => rule.required(),
     },
   ],

@@ -1,14 +1,14 @@
 import { Rule } from 'sanity'
 
 export default {
-  name: 'course',
+  name: 'project',
   type: 'document',
-  title: 'Courses',
+  title: 'Projects',
   fields: [
     {
-      name: 'logo',
+      name: 'image',
       type: 'image',
-      title: 'Logo',
+      title: 'Image',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
@@ -19,15 +19,15 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'provider',
-      type: 'string',
-      title: 'Provider',
+      name: 'date',
+      type: 'date',
+      title: 'Date',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'completionDate',
-      type: 'date',
-      title: 'Completion Date',
+      name: 'link',
+      type: 'string',
+      title: 'Link',
       validation: (rule: Rule) => rule.required(),
     },
   ],

@@ -1,33 +1,35 @@
 import { Rule } from 'sanity'
 
 export default {
-  name: 'course',
+  name: 'about',
   type: 'document',
-  title: 'Courses',
+  title: 'About Me',
   fields: [
     {
-      name: 'logo',
+      name: 'photo',
       type: 'image',
-      title: 'Logo',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
     {
       name: 'name',
       type: 'string',
-      title: 'Name',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'provider',
+      name: 'location',
       type: 'string',
-      title: 'Provider',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'completionDate',
-      type: 'date',
-      title: 'Completion Date',
+      name: 'locationFlag',
+      type: 'image',
+      validation: (rule: Rule) => rule.required(),
+      options: { accept: 'image/webp' },
+    },
+    {
+      name: 'description',
+      type: 'string',
       validation: (rule: Rule) => rule.required(),
     },
   ],
