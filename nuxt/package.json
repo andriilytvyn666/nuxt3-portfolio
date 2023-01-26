@@ -9,14 +9,14 @@
   },
   "devDependencies": {
     "@nuxtjs/i18n": "^8.0.0-beta.8",
-    "@nuxtjs/tailwindcss": "^6.2.0",
+    "@nuxtjs/tailwindcss": "^6.3.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.32.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.9.0",
-    "nuxt": "^3.1.0",
+    "nuxt": "^3.1.1",
     "prettier": "2.8.3",
     "vite-plugin-eslint": "^1.8.1"
   },
