@@ -1,9 +1,6 @@
 <template>
   <div class="card-project">
-    <nuxt-img
-      src="/img/project/stubImage.png"
-      class="max-h-[9.813rem] h-full"
-    />
+    <nuxt-img :src="props.image" class="max-h-[9.813rem] h-full" />
     <div class="card-project-bottom">
       <div class="flex flex-col overflow-hidden">
         <span class="text-xl truncate text-light">{{ props.title }}</span>
@@ -20,6 +17,7 @@
 const props = defineProps<{
   title: string
   date: Date
+  image: string
 }>()
 
 const { t } = useI18n()

@@ -2,7 +2,7 @@
   <CardWide
     title="Junior UI/UX designer"
     :text="`Google LLC ‧ ${beginMsg} - ${endMsg}`"
-    :logo="`/img/card/${props.logo}.png`"
+    :logo="props.logo"
   />
 </template>
 

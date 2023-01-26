@@ -1,9 +1,9 @@
 <template>
   <CardWideAction
-    title="Programming with JavaScript"
+    :title="props.name"
     :text="`${props.provider} ‧ ${completionDateMsg}`"
     actionIcon="feather/file"
-    :logo="`/img/card/${logo}.png`"
+    :logo="logo"
   />
 </template>
 

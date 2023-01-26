@@ -9,7 +9,7 @@
     />
   </div>
   <div class="flex flex-col" v-else>
-    <!-- <Swiper
+    <Swiper
       class="w-full"
       :slides-per-view="8"
       :space-between="20"
@@ -23,12 +23,13 @@
     >
       <SwiperSlide v-for="skill in skills" :key="skill.name">
         <CardSkill
-          image="/img/skillNuxt.png"
+          :image="skill.logo.asset._ref"
           :level="skill.level"
           :title="skill.name"
+          :key="skill.name"
         />
       </SwiperSlide>
-    </Swiper> -->
+    </Swiper>
   </div>
 </template>
 
@@ -40,24 +41,17 @@ const props = defineProps<{
 const sanity = useSanity()
 
 type Skill = {
-  _createdAt: string
-  _id: string
-  _rev: string
-  _type: string
-  _updatedAt: string
   name: string
   level: string
   logo: Logo
 }
 
 type Logo = {
-  _type: string
   asset: Asset
 }
 
 type Asset = {
   _ref: string
-  _type: string
 }
 
 const query = groq`*[_type == "skill"]`

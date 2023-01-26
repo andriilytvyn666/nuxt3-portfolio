@@ -1,28 +1,30 @@
 <template>
   <div class="flex gap-6 mt-6 text-xl font-medium text-light">
     <nuxt-img
-      src="/img/photo.png"
+      :src="about.photo.asset._ref"
       class="rounded-[0.313rem] max-w-min h-[16rem]"
     />
     <div class="flex flex-col justify-between flex-grow">
       <div class="flex flex-col gap-6">
         <div class="flex flex-col gap-1 py-1">
-          <span class="text-2xl font-bold">{{
-            $t('landing.aboutMe.name')
-          }}</span>
+          <span class="text-2xl font-bold">{{ about.name }}</span>
           <span class="flex items-center gap-2 text-light-unfocused">
             <nuxt-img
-              src="/img/emojiFlagUkraine.png"
+              :src="about.locationFlag.asset._ref"
               alt="Ukraine Flag"
               class="h-6"
             />
-            {{ $t('landing.aboutMe.location') }}
+            {{ about.location }}
           </span>
         </div>
-        <div>
-          <p class="font-medium whitespace-pre-line">
-            {{ $t('landing.aboutMe.description') }}
-          </p>
+        <div class="flex flex-col">
+          <span
+            class="font-medium"
+            v-for="(line, lineNumber) of about.description.split('\\n')"
+            :key="lineNumber"
+          >
+            {{ line }}
+          </span>
         </div>
       </div>
       <div class="flex flex-row min-h-[3rem]">
@@ -67,4 +69,28 @@ const props = defineProps<{
 }>()
 
 const store = useLandingStore()
+
+const sanity = useSanity()
+
+type About = {
+  name: string
+  photo: Image
+  locationFlag: Image
+  description: string
+  location: string
+}
+
+type Image = {
+  asset: Asset
+}
+
+type Asset = {
+  _ref: string
+}
+
+const query = groq`*[_type == "about"]`
+const { data } = await useAsyncData('about', () => sanity.fetch<About[]>(query))
+
+const about = data.value![0]
+console.log(about.description.split('\\n'))
 </script>

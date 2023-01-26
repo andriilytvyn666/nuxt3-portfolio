@@ -2,7 +2,7 @@
   <CardWide
     :title="props.university"
     :text="detailsMsg"
-    :logo="`/img/card/${logo}.png`"
+    :logo="logo"
     v-for="i in 1"
     :key="i"
   />
