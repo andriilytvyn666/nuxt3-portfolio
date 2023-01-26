@@ -1,38 +1,15 @@
 <template>
   <div class="grid grid-cols-8 gap-5" v-if="props.grid">
     <CardSkill
-      v-for="i in 3"
-      :key="i"
-      image="/img/skillNuxt.png"
-      level="novice"
-    />
-    <CardSkill
-      v-for="i in 3"
-      :key="i"
-      image="/img/skillNuxt.png"
-      level="beginner"
-    />
-    <CardSkill
-      v-for="i in 3"
-      :key="i"
-      image="/img/skillNuxt.png"
-      level="competent"
-    />
-    <CardSkill
-      v-for="i in 3"
-      :key="i"
-      image="/img/skillNuxt.png"
-      level="proficient"
-    />
-    <CardSkill
-      v-for="i in 3"
-      :key="i"
-      image="/img/skillNuxt.png"
-      level="expert"
+      :image="skill.logo.asset._ref"
+      :level="skill.level"
+      :title="skill.name"
+      v-for="skill in skills"
+      :key="skill.name"
     />
   </div>
   <div class="flex flex-col" v-else>
-    <Swiper
+    <!-- <Swiper
       class="w-full"
       :slides-per-view="8"
       :space-between="20"
@@ -44,22 +21,14 @@
       }"
       :loop="true"
     >
-      <SwiperSlide v-for="i in 3" :key="i">
-        <CardSkill image="/img/skillNuxt.png" level="novice" />
+      <SwiperSlide v-for="skill in skills" :key="skill.name">
+        <CardSkill
+          image="/img/skillNuxt.png"
+          :level="skill.level"
+          :title="skill.name"
+        />
       </SwiperSlide>
-      <SwiperSlide v-for="i in 3" :key="i">
-        <CardSkill image="/img/skillNuxt.png" level="beginner" />
-      </SwiperSlide>
-      <SwiperSlide v-for="i in 3" :key="i">
-        <CardSkill image="/img/skillNuxt.png" level="competent" />
-      </SwiperSlide>
-      <SwiperSlide v-for="i in 3" :key="i">
-        <CardSkill image="/img/skillNuxt.png" level="proficient" />
-      </SwiperSlide>
-      <SwiperSlide v-for="i in 3" :key="i">
-        <CardSkill image="/img/skillNuxt.png" level="expert" />
-      </SwiperSlide>
-    </Swiper>
+    </Swiper> -->
   </div>
 </template>
 
@@ -67,4 +36,34 @@
 const props = defineProps<{
   grid: boolean
 }>()
+
+const sanity = useSanity()
+
+type Skill = {
+  _createdAt: string
+  _id: string
+  _rev: string
+  _type: string
+  _updatedAt: string
+  name: string
+  level: string
+  logo: Logo
+}
+
+type Logo = {
+  _type: string
+  asset: Asset
+}
+
+type Asset = {
+  _ref: string
+  _type: string
+}
+
+const query = groq`*[_type == "skill"]`
+const { data } = await useAsyncData('skills', () =>
+  sanity.fetch<Skill[]>(query)
+)
+
+const skills = data.value!
 </script>

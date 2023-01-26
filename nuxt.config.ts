@@ -12,7 +12,20 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@pinia/nuxt',
+    '@nuxtjs/sanity',
   ],
+  image: {
+    provider: 'sanity',
+    sanity: {
+      projectId: 'oyqb1zv8',
+    },
+  },
+  sanity: {
+    projectId: 'oyqb1zv8',
+    dataset: 'production',
+    apiVersion: '2023-01-26',
+    minimal: false,
+  },
   vite: {
     plugins: [eslintPlugin()],
   },

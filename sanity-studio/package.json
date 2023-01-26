@@ -29,9 +29,20 @@
     "typescript": "^4.0.0"
   },
   "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
     "semi": false,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "always",
+    "requirePragma": false,
+    "htmlWhitespaceSensitivity": "css",
+    "vueIndentScriptAndStyle": false,
+    "endOfLine": "lf",
+    "singleAttributePerLine": false
   }
 }
