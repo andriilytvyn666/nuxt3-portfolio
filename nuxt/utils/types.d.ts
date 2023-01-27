@@ -40,6 +40,13 @@ type Skill = {
   level: string
 }
 
+type Contact = {
+  _id: string
+  logo: image
+  name: string
+  contact: string
+}
+
 type localeString = {
   en: string
   uk: string

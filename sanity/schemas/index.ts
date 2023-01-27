@@ -5,6 +5,7 @@ import education from './education'
 import project from './project'
 import about from './about'
 import localeString from './localeString'
+import contact from './contact'
 
 export const schemaTypes = [
   skill,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   project,
   about,
   localeString,
+  contact,
 ]
