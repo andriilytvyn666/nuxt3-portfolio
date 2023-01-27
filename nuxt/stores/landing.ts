@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 export const useLandingStore = defineStore('landing', () => {
   const grid = ref<boolean>(false)
   const contactsOpen = ref<boolean>(false)
+  const name = ref<string>('name')
 
   const openContacts = () => {
     contactsOpen.value = true
@@ -19,6 +20,10 @@ export const useLandingStore = defineStore('landing', () => {
     grid.value = false
   }
 
+  const setName = (value: string) => {
+    name.value = value
+  }
+
   return {
     grid,
     displayCards,
@@ -26,5 +31,7 @@ export const useLandingStore = defineStore('landing', () => {
     contactsOpen,
     openContacts,
     closeContacts,
+    name,
+    setName,
   }
 })

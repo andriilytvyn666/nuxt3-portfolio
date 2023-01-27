@@ -6,6 +6,11 @@ export default {
   title: 'About Me',
   fields: [
     {
+      name: 'uiName',
+      type: 'string',
+      title: 'Name',
+    },
+    {
       name: 'photo',
       type: 'image',
       validation: (rule: Rule) => rule.required(),
@@ -13,12 +18,12 @@ export default {
     },
     {
       name: 'name',
-      type: 'string',
+      type: 'localeString',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'location',
-      type: 'string',
+      type: 'localeString',
       validation: (rule: Rule) => rule.required(),
     },
     {
@@ -29,7 +34,7 @@ export default {
     },
     {
       name: 'description',
-      type: 'string',
+      type: 'localeString',
       validation: (rule: Rule) => rule.required(),
     },
   ],

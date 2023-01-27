@@ -47,6 +47,15 @@ type Contact = {
   contact: string
 }
 
+type About = {
+  _id: string
+  photo: image
+  name: localeString
+  location: localeString
+  locationFlag: image
+  description: localeString
+}
+
 type localeString = {
   en: string
   uk: string
