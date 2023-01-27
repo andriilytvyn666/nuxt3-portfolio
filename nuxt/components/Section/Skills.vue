@@ -1,11 +1,11 @@
 <template>
   <div class="grid grid-cols-8 gap-5" v-if="props.grid && renderCondition">
     <CardSkill
-      :image="skill.logo.asset._ref"
-      :level="skill.level"
+      :logo="skill.logo.asset._ref"
       :title="skill.name"
+      :level="skill.level"
       v-for="skill in skills"
-      :key="skill.name"
+      :key="skill._id"
     />
   </div>
   <div class="flex flex-col" v-if="!props.grid && renderCondition">
@@ -26,11 +26,11 @@
         will be displaying values three times in a row.
         I assume it's a nuxt-swiper plugin issue.
       -->
-      <SwiperSlide v-for="skill in skills" :key="skill.name">
+      <SwiperSlide v-for="skill in skills" :key="skill._id">
         <CardSkill
-          :image="skill.logo.asset._ref"
-          :level="skill.level"
+          :logo="skill.logo.asset._ref"
           :title="skill.name"
+          :level="skill.level"
           :key="skill.name"
         />
       </SwiperSlide>

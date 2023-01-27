@@ -1,7 +1,7 @@
 <template>
   <div class="card-skill">
     <div class="flex flex-col items-center gap-2">
-      <nuxt-img :src="props.image" class="w-16 h-16" alt="skillNuxt" />
+      <nuxt-img :src="props.logo" class="w-16 h-16" alt="skillNuxt" />
       <div class="flex flex-col gap-1 pb-1 text-center text-light">
         <span class="text-xl font-bold leading-6">{{ title }}</span>
         <span class="text-sm font-medium leading-5 text-light-unfocused">{{
@@ -13,29 +13,11 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-  image: {
-    type: String,
-    required: true,
-  },
-  level: {
-    type: String,
-    required: true,
-    validator(value: string) {
-      return [
-        'novice',
-        'beginner',
-        'competent',
-        'proficient',
-        'expert',
-      ].includes(value)
-    },
-  },
-})
+const props = defineProps<{
+  title: string
+  logo: string
+  level: string
+}>()
 </script>
 
 <style lang="postcss">
