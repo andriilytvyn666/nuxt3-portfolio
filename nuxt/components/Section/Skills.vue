@@ -1,5 +1,8 @@
 <template>
-  <div class="grid grid-cols-8 gap-5" v-if="props.grid && renderCondition">
+  <div
+    class="grid grid-cols-8 gap-5"
+    v-if="props.grid && renderCondition && !store.contactsOpen"
+  >
     <CardSkill
       :logo="skill.logo.asset._ref"
       :title="skill.name"
@@ -8,7 +11,10 @@
       :key="skill._id"
     />
   </div>
-  <div class="flex flex-col" v-if="!props.grid && renderCondition">
+  <div
+    class="flex flex-col"
+    v-if="!props.grid && renderCondition && !store.contactsOpen"
+  >
     <Swiper
       class="w-full"
       :slides-per-view="8"
@@ -39,13 +45,18 @@
 </template>
 
 <script setup lang="ts">
+import { useLandingStore } from '~~/stores/landing'
+
 const props = defineProps<{
   grid: boolean
 }>()
+
+const store = useLandingStore()
 
 const query = groq`*[_type == "skill"] { _id, logo, name, level }`
 const { data } = useSanityQuery<Skill[]>(query)
 
 const skills = data.value
+
 const renderCondition: boolean = skills !== null && skills.length > 0
 </script>
