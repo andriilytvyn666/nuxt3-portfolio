@@ -16,5 +16,6 @@ const { locale, setLocale, setLocaleCookie } = useI18n()
 const updateLocaleCookie = () => {
   setLocaleCookie(locale.value)
   setLocale(locale.value)
+  window.location.reload()
 }
 </script>

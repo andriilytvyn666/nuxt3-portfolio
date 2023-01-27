@@ -21,8 +21,6 @@ const beginMsg = `${t(
   `landing.shared.months.${props.dateOfEmployment.getMonth()}`
 )} ${props.dateOfEmployment.getFullYear()}`
 
-console.log(props.dateOfDismissal)
-
 // TODO: refactor message generation
 const endMsg = () => {
   if (props.dateOfDismissal.getTime() === 0) {
