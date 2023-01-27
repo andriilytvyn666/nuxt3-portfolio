@@ -9,6 +9,8 @@ export default {
       name: 'image',
       type: 'image',
       title: 'Image',
+      description:
+        'Project image. 558x314 (approx. 16:9) WebP image with a solid background.',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
@@ -19,14 +21,14 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'date',
+      name: 'updateDate',
       type: 'date',
-      title: 'Date',
+      title: 'Update date',
       validation: (rule: Rule) => rule.required(),
     },
     {
       name: 'link',
-      type: 'string',
+      type: 'url',
       title: 'Link',
       validation: (rule: Rule) => rule.required(),
     },

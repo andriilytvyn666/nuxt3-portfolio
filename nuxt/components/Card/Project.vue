@@ -3,11 +3,12 @@
     <nuxt-img :src="props.image" class="max-h-[9.813rem] h-full" />
     <div class="card-project-bottom">
       <div class="flex flex-col overflow-hidden">
-        <span class="text-xl truncate text-light">{{ props.title }}</span>
+        <span class="text-xl truncate text-light">{{ props.name }}</span>
         <span class="text-base truncate text-light-unfocused">{{
-          `${monthName} ${props.date.getFullYear()}`
+          `${monthName} ${props.updateDate.getFullYear()}`
         }}</span>
       </div>
+      <!-- TODO: Add action on click -->
       <ButtonIcon class="shrink-0" icon="feather/arrow-right" type="primary" />
     </div>
   </div>
@@ -15,14 +16,15 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  title: string
-  date: Date
   image: string
+  name: string
+  updateDate: Date
+  link: string
 }>()
 
 const { t } = useI18n()
 
-const monthName = t(`landing.shared.months[${props.date.getMonth()}]`)
+const monthName = t(`landing.shared.months[${props.updateDate.getMonth()}]`)
 </script>
 
 <style lang="postcss">

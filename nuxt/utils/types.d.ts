@@ -16,6 +16,14 @@ type Education = {
   graduationDate: string
 }
 
+type Project = {
+  _id: string
+  image: Image
+  name: string
+  updateDate: string
+  link: string
+}
+
 type localeString = {
   en: string
   uk: string
