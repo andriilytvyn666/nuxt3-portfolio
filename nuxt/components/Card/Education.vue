@@ -1,6 +1,6 @@
 <template>
   <CardWide
-    :title="props.university"
+    :title="props.schoolName"
     :text="detailsMsg"
     :logo="logo"
     v-for="i in 1"
@@ -10,15 +10,15 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  university: string
-  degree: string
-  start: Date
-  end: Date
-  major: string
   logo: string
+  schoolName: string
+  major: string
+  degree: string
+  enrollmentDate: Date
+  graduationDate: Date
 }>()
 
-const detailsMsg = `${
-  props.degree
-} ‧ CS(AI) ‧ ${props.start.getFullYear()} - ${props.end.getFullYear()}`
+const detailsMsg = `${props.degree} ‧ ${
+  props.major
+} ‧ ${props.enrollmentDate.getFullYear()} - ${props.graduationDate.getFullYear()}`
 </script>

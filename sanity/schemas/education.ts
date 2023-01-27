@@ -13,9 +13,9 @@ export default {
       options: { accept: 'image/webp' },
     },
     {
-      name: 'name',
-      type: 'string',
-      title: 'Name',
+      name: 'schoolName',
+      type: 'localeString',
+      title: 'School name',
       validation: (rule: Rule) => rule.required(),
     },
     {
@@ -29,17 +29,21 @@ export default {
       type: 'string',
       title: 'Degree',
       validation: (rule: Rule) => rule.required(),
+      initialValue: 'bachelor',
+      options: {
+        list: ['associate', 'bachelor', 'master', 'phd'],
+      },
     },
     {
-      name: 'startDate',
+      name: 'enrollmentDate',
       type: 'date',
-      title: 'Start Date',
+      title: 'Entollment date',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'endDate',
+      name: 'graduationDate',
       type: 'date',
-      title: 'End Date',
+      title: 'Graduation date',
       validation: (rule: Rule) => rule.required(),
     },
   ],
