@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-3" v-if="courses.length > 0">
+  <div class="flex flex-col gap-3" v-if="renderCondition">
     <SectionTitle
       icon="feather/check-square"
       :title="$t('landing.shared.sectionNames.courses')"
@@ -18,27 +18,9 @@
 </template>
 
 <script setup lang="ts">
-const sanity = useSanity()
+const query: string = groq`*[_type == "course"] {_id, logo, name, provider, completionDate}`
+const { data } = await useSanityQuery<Course[]>(query)
 
-type Course = {
-  name: string
-  provider: string
-  completionDate: Date
-  logo: Logo
-}
-
-type Logo = {
-  asset: Asset
-}
-
-type Asset = {
-  _ref: string
-}
-
-const query = groq`*[_type == "course"]`
-const { data } = await useAsyncData('course', () =>
-  sanity.fetch<Course[]>(query)
-)
-
-const courses = data.value!
+const courses = data.value
+const renderCondition: boolean = courses !== null && courses.length > 0
 </script>

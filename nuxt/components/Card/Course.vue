@@ -9,9 +9,9 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-  provider: string
-  name: string
   logo: string
+  name: string
+  provider: string
   completionDate: Date
 }>()
 

@@ -9,6 +9,8 @@ export default {
       name: 'logo',
       type: 'image',
       title: 'Logo',
+      description:
+        'Course provider logo. 128x128 WebP image with a solid background.',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
@@ -27,7 +29,7 @@ export default {
     {
       name: 'completionDate',
       type: 'date',
-      title: 'Completion Date',
+      title: 'Completion date',
       validation: (rule: Rule) => rule.required(),
     },
   ],
