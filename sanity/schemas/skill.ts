@@ -9,6 +9,7 @@ export default {
       name: 'logo',
       type: 'image',
       title: 'Logo',
+      description: '128x128 WebP image.',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
@@ -22,8 +23,8 @@ export default {
       name: 'level',
       type: 'string',
       title: 'Level',
+      validation: (rule: Rule) => rule.required(),
       initialValue: 'novice',
-      validation: (rule: Rule) => rule.required().min(6).max(10),
       options: {
         list: ['novice', 'beginner', 'competent', 'proficient', 'expert'],
       },

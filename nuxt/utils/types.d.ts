@@ -1,6 +1,6 @@
 type Course = {
   _id: string
-  logo: Image
+  logo: image
   name: string
   provider: string
   completionDate: string
@@ -8,7 +8,7 @@ type Course = {
 
 type Education = {
   _id: string
-  logo: Image
+  logo: image
   schoolName: localeString
   major: string
   degree: string
@@ -18,7 +18,7 @@ type Education = {
 
 type Project = {
   _id: string
-  image: Image
+  image: image
   name: string
   updateDate: string
   link: string
@@ -26,11 +26,18 @@ type Project = {
 
 type Experience = {
   _id: string
-  logo: Image
+  logo: image
   title: string
   company: string
   dateOfEmployment: string
   dateOfDismissal?: string
+}
+
+type Skill = {
+  _id: string
+  logo: image
+  name: string
+  level: string
 }
 
 type localeString = {
@@ -38,6 +45,6 @@ type localeString = {
   uk: string
 }
 
-type Image = {
+type image = {
   asset: { _ref: string }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-8 gap-5" v-if="props.grid">
+  <div class="grid grid-cols-8 gap-5" v-if="props.grid && renderCondition">
     <CardSkill
       :image="skill.logo.asset._ref"
       :level="skill.level"
@@ -8,7 +8,7 @@
       :key="skill.name"
     />
   </div>
-  <div class="flex flex-col" v-else>
+  <div class="flex flex-col" v-if="!props.grid && renderCondition">
     <Swiper
       class="w-full"
       :slides-per-view="8"
@@ -21,6 +21,11 @@
       }"
       :loop="true"
     >
+      <!--
+        The number of skills should be at least 8 or Swiper will break and 
+        will be displaying values three times in a row.
+        I assume it's a nuxt-swiper plugin issue.
+      -->
       <SwiperSlide v-for="skill in skills" :key="skill.name">
         <CardSkill
           :image="skill.logo.asset._ref"
@@ -38,26 +43,9 @@ const props = defineProps<{
   grid: boolean
 }>()
 
-const sanity = useSanity()
+const query = groq`*[_type == "skill"] { _id, logo, name, level }`
+const { data } = useSanityQuery<Skill[]>(query)
 
-type Skill = {
-  name: string
-  level: string
-  logo: Logo
-}
-
-type Logo = {
-  asset: Asset
-}
-
-type Asset = {
-  _ref: string
-}
-
-const query = groq`*[_type == "skill"]`
-const { data } = await useAsyncData('skills', () =>
-  sanity.fetch<Skill[]>(query)
-)
-
-const skills = data.value!
+const skills = data.value
+const renderCondition: boolean = skills !== null && skills.length > 0
 </script>
