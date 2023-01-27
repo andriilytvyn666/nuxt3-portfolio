@@ -24,6 +24,15 @@ type Project = {
   link: string
 }
 
+type Experience = {
+  _id: string
+  logo: Image
+  title: string
+  company: string
+  dateOfEmployment: string
+  dateOfDismissal?: string
+}
+
 type localeString = {
   en: string
   uk: string

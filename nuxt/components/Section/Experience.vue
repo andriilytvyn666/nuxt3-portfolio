@@ -1,46 +1,35 @@
 <template>
-  <div class="flex flex-col gap-3" v-if="jobs.length > 0">
+  <div class="flex flex-col gap-3" v-if="renderCondition">
     <SectionTitle
       icon="feather/briefcase"
       :title="$t('landing.shared.sectionNames.experience')"
     />
     <div class="grid grid-cols-2 gap-5">
       <CardExperience
-        :company="job.company"
-        :logo="job.logo.asset._ref"
-        :title="job.name"
-        :start="new Date(job.startDate)"
-        :end="new Date(job.endDate)"
-        v-for="job in jobs"
-        :key="job.name"
+        :logo="experience.logo.asset._ref"
+        :title="experience.title"
+        :company="experience.company"
+        :dateOfEmployment="new Date(experience.dateOfEmployment)"
+        :dateOfDismissal="handleDismissalDate(experience)"
+        v-for="experience in experiences"
+        :key="experience._id"
       />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const sanity = useSanity()
+const query = groq`*[_type == "experience"]
+{ _id, logo, title, company, dateOfEmployment, dateOfDismissal}`
 
-type Job = {
-  name: string
-  company: string
-  startDate: Date
-  endDate: Date
-  logo: Logo
+const { data } = await useSanityQuery<Experience[]>(query)
+
+const experiences = data.value
+const renderCondition: boolean = experiences !== null && experiences.length > 0
+
+// TODO: refactor date handling
+const handleDismissalDate = (experience: Experience): Date => {
+  if (experience.dateOfDismissal === undefined) return new Date(0)
+  return new Date(experience.dateOfDismissal)
 }
-
-type Logo = {
-  asset: Asset
-}
-
-type Asset = {
-  _ref: string
-}
-
-const query = groq`*[_type == "experience"]`
-const { data } = await useAsyncData('experience', () =>
-  sanity.fetch<Job[]>(query)
-)
-
-const jobs = data.value!
 </script>

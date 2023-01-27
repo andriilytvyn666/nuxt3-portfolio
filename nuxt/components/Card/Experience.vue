@@ -1,26 +1,37 @@
 <template>
   <CardWide
-    title="Junior UI/UX designer"
-    :text="`Google LLC ‧ ${beginMsg} - ${endMsg}`"
+    :title="props.title"
+    :text="`${props.company} ‧ ${beginMsg} - ${endMsg()}`"
     :logo="props.logo"
   />
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
-  title: string
   logo: string
+  title: string
   company: string
-  start: Date
-  end: Date
+  dateOfEmployment: Date
+  dateOfDismissal: Date
 }>()
 
 const { t } = useI18n()
 
 const beginMsg = `${t(
-  `landing.shared.months.${props.start.getMonth()}`
-)} ${props.start.getFullYear()}`
-const endMsg = `${t(
-  `landing.shared.months.${props.end.getMonth()}`
-)} ${props.end.getFullYear()}`
+  `landing.shared.months.${props.dateOfEmployment.getMonth()}`
+)} ${props.dateOfEmployment.getFullYear()}`
+
+console.log(props.dateOfDismissal)
+
+// TODO: refactor message generation
+const endMsg = () => {
+  if (props.dateOfDismissal.getTime() === 0) {
+    // TODO: add localization
+    return 'Present'
+  }
+
+  return `${t(
+    `landing.shared.months.${props.dateOfDismissal.getMonth()}`
+  )} ${props.dateOfDismissal.getFullYear()}`
+}
 </script>

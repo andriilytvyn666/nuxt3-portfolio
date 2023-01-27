@@ -9,13 +9,14 @@ export default {
       name: 'logo',
       type: 'image',
       title: 'Logo',
+      description: 'Company logo. 128x128 WebP image with a solid background.',
       validation: (rule: Rule) => rule.required(),
       options: { accept: 'image/webp' },
     },
     {
-      name: 'name',
+      name: 'title',
       type: 'string',
-      title: 'Name',
+      title: 'Job title',
       validation: (rule: Rule) => rule.required(),
     },
     {
@@ -25,16 +26,15 @@ export default {
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'startDate',
+      name: 'dateOfEmployment',
       type: 'date',
-      title: 'Start Date',
+      title: 'Date of employment',
       validation: (rule: Rule) => rule.required(),
     },
     {
-      name: 'endDate',
+      name: 'dateOfDismissal',
       type: 'date',
-      title: 'End Date',
-      validation: (rule: Rule) => rule.required(),
+      title: 'Date of dismissal',
     },
   ],
 }
