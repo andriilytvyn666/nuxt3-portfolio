@@ -17,5 +17,6 @@ const updateLocaleCookie = () => {
   setLocaleCookie(locale.value)
   setLocale(locale.value)
   window.location.reload()
+  window.scrollTo(0, 0)
 }
 </script>

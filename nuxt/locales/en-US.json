@@ -22,16 +22,16 @@
         "December"
       ],
       "academicDegrees": {
-        "bachelor": "Bachelor"
+        "associate": "Associate",
+        "bachelor": "Bachelor",
+        "master": "Master",
+        "phd": "PhD"
       }
     },
     "header": {
       "logoTitle": "Portfolio"
     },
     "aboutMe": {
-      "name": "Andrii Lytvyn",
-      "location": "Lviv, Ukraine",
-      "description": "I’m 3rd year CS/AI student.\nI like to create great designs and other things too.\nWeb development and UI/UX design are my main interests.",
       "downloadCV": "Download CV",
       "contactMe": "Contact Me",
       "aboutSkillLevels": "About skill levels"
