@@ -3,6 +3,8 @@
     <button
       class="border-r button-group-shared bg-dark hover:text-light"
       @click="store.displayCards"
+      name="buttonGrid"
+      aria-label="buttonGrid"
       v-show="store.grid"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
@@ -10,12 +12,16 @@
     <button
       class="border-r button-group-shared bg-dark-hover text-light"
       v-show="!store.grid"
+      name="buttonCards"
+      aria-label="buttonCards"
     >
       <NuxtIcon :name="props.iconLeft" class="text-xl leading-5" filled />
     </button>
     <button
       class="cursor-pointer button-group-shared bg-dark-hover text-light"
       v-show="store.grid"
+      name="buttonGrid"
+      aria-label="buttonGrid"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
     </button>
@@ -23,6 +29,8 @@
       class="cursor-pointer button-group-shared hover:text-light"
       @click="store.displayGrid"
       v-show="!store.grid"
+      name="buttonCards"
+      aria-label="buttonCards"
     >
       <NuxtIcon :name="props.iconRight" class="text-xl leading-5" filled />
     </button>

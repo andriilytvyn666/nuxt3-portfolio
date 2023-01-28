@@ -13,17 +13,17 @@
       <div class="flex flex-col justify-between flex-grow">
         <div class="flex flex-col gap-6">
           <div class="flex flex-col gap-1 py-1">
-            <span class="text-2xl font-bold">{{
-              getLocalizedString($i18n.locale, about.name)
-            }}</span>
-            <span class="flex items-center gap-2 text-light-unfocused">
+            <h2 class="text-2xl font-bold">
+              {{ getLocalizedString($i18n.locale, about.name) }}
+            </h2>
+            <h3 class="flex items-center gap-2 text-light-unfocused">
               <nuxt-img
                 :src="about.locationFlag.asset._ref"
                 :alt="getLocalizedString($i18n.locale, about.location)"
                 class="w-6 h-6"
               />
               {{ getLocalizedString($i18n.locale, about.location) }}
-            </span>
+            </h3>
           </div>
           <div class="flex flex-col">
             <span
@@ -43,9 +43,11 @@
             <ButtonText
               :text="$t('landing.aboutMe.downloadCV')"
               icon="feather/download"
+              name="downloadCV"
             />
             <ButtonText
               :text="$t('landing.aboutMe.contactMe')"
+              name="close"
               icon="feather/x"
               type="close"
               @click="store.closeContacts"
@@ -53,6 +55,7 @@
             />
             <ButtonText
               :text="$t('landing.aboutMe.contactMe')"
+              name="contactMe"
               icon="feather/message-circle"
               type="primary"
               @click="store.openContacts"
@@ -63,6 +66,7 @@
           <div class="flex gap-4" v-if="!store.contactsOpen">
             <ButtonText
               :text="$t('landing.aboutMe.aboutSkillLevels')"
+              name="aboutSkillLevels"
               icon="feather/info"
             />
             <ButtonGroup iconLeft="feather/columns" iconRight="feather/grid" />

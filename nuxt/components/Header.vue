@@ -10,19 +10,19 @@
         class="text-light flex items-center gap-2 text-[1.656rem] leading-8 font-bold cursor-pointer"
       >
         <nuxt-icon class="text-[2rem] leading-8" name="feather/user" filled />
-        <span>{{ $t('landing.header.logoTitle') }}</span>
+        <h1>{{ $t('landing.header.logoTitle') }}</h1>
       </div>
       <nav class="text-light flex gap-4 text-[2rem]">
-        <button>
+        <button name="mail" aria-label="mail">
           <nuxt-icon class="icon-link" name="header/at-circle" filled />
         </button>
-        <button>
+        <button name="github" aria-label="github">
           <nuxt-icon class="icon-link" name="header/logo-github" filled />
         </button>
-        <button>
+        <button name="linkedin" aria-label="linkedin">
           <nuxt-icon class="icon-link" name="header/logo-linkedin" filled />
         </button>
-        <button>
+        <button name="behance" aria-label="behance">
           <nuxt-icon class="icon-link" name="header/logo-behance" filled />
         </button>
       </nav>

@@ -1,24 +1,20 @@
 <template>
-  <button @click="$emit('click')" :class="getClass()">
+  <button
+    :name="props.name"
+    :aria-label="props.name"
+    @click="$emit('click')"
+    :class="getClass()"
+  >
     <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
   </button>
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  icon: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    validator(value: string) {
-      return ['primary', 'secondary', 'close'].includes(value)
-    },
-    default: 'secondary',
-    required: true,
-  },
-})
+const props = defineProps<{
+  name: string
+  icon: string
+  type: string
+}>()
 
 defineEmits(['click'])
 

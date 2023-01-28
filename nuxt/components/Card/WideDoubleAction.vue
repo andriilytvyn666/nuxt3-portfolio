@@ -1,7 +1,15 @@
 <template>
   <CardWide :logo="props.logo" :title="props.title" :text="props.text">
-    <ButtonIcon :icon="props.secondaryActionIcon" type="secondary" />
-    <ButtonIcon :icon="props.primaryActionIcon" type="primary" />
+    <ButtonIcon
+      :name="`${props.title}-secondary`"
+      :icon="props.secondaryActionIcon"
+      type="secondary"
+    />
+    <ButtonIcon
+      :name="`${props.title}-primary`"
+      :icon="props.primaryActionIcon"
+      type="primary"
+    />
   </CardWide>
 </template>
 

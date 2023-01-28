@@ -1,6 +1,6 @@
 <template>
   <CardWide :logo="props.logo" :title="props.title" :text="props.text">
-    <ButtonIcon :icon="props.actionIcon" type="primary" />
+    <ButtonIcon :name="title" :icon="props.actionIcon" type="primary" />
   </CardWide>
 </template>
 

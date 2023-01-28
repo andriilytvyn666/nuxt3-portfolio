@@ -13,7 +13,12 @@
         }}</span>
       </div>
       <!-- TODO: Add action on click -->
-      <ButtonIcon class="shrink-0" icon="feather/arrow-right" type="primary" />
+      <ButtonIcon
+        :name="`${props.name}-open`"
+        class="shrink-0"
+        icon="feather/arrow-right"
+        type="primary"
+      />
     </div>
   </div>
 </template>

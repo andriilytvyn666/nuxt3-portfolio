@@ -1,5 +1,5 @@
 <template>
-  <button @click="$emit('click')" :class="getClass()">
+  <button :name="props.name" @click="$emit('click')" :class="getClass()">
     <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
     <span>{{ props.text }}</span>
   </button>
@@ -7,6 +7,10 @@
 
 <script setup land="ts">
 const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
   text: {
     type: String,
     required: true,
