@@ -1,0 +1,49 @@
+{
+  "landing": {
+    "shared": {
+      "sectionNames": {
+        "projects": "Projects",
+        "experience": "Work Experience",
+        "courses": "Courses",
+        "education": "Education"
+      },
+      "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "academicDegrees": {
+        "associate": "Associate",
+        "bachelor": "Bachelor",
+        "master": "Master",
+        "phd": "PhD"
+      }
+    },
+    "header": {
+      "logoTitle": "Portfolio"
+    },
+    "aboutMe": {
+      "downloadCV": "Download CV",
+      "contactMe": "Contact Me",
+      "aboutSkillLevels": "About skill levels"
+    },
+    "skills": {
+      "levels": {
+        "novice": "Novice",
+        "beginner": "Beginner",
+        "competent": "Competent",
+        "proficient": "Proficient",
+        "expert": "Expert"
+      }
+    }
+  }
+}

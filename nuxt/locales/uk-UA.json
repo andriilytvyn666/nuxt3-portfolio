@@ -1,0 +1,49 @@
+{
+  "landing": {
+    "shared": {
+      "sectionNames": {
+        "projects": "Проєкти",
+        "experience": "Досвід роботи",
+        "courses": "Курси",
+        "education": "Освіта"
+      },
+      "months": [
+        "Січень",
+        "Лютий",
+        "Березень",
+        "Квітень",
+        "Травень",
+        "Червень",
+        "Липень",
+        "Серпень",
+        "Вересень",
+        "Жовтень",
+        "Листопад",
+        "Грудень"
+      ],
+      "academicDegrees": {
+        "associate": "Спеціаліст",
+        "bachelor": "Бакалавр",
+        "master": "Магістр",
+        "phd": "Кандидат наук"
+      }
+    },
+    "header": {
+      "logoTitle": "Портфоліо"
+    },
+    "aboutMe": {
+      "downloadCV": "Резюме",
+      "contactMe": "Зв'язатися",
+      "aboutSkillLevels": "Детальніше про рівні"
+    },
+    "skills": {
+      "levels": {
+        "novice": "Новачок",
+        "beginner": "Початківець",
+        "competent": "Компетентний",
+        "proficient": "Досвідчений",
+        "expert": "Експерт"
+      }
+    }
+  }
+}
