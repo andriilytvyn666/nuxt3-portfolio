@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     projectId: 'oyqb1zv8',
     dataset: 'production',
     apiVersion: '2023-01-26',
-    minimal: false,
+    minimal: true,
   },
   vite: {
     plugins: [eslintPlugin()],
