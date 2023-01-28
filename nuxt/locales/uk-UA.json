@@ -1,5 +1,10 @@
 {
   "landing": {
+    "meta": {
+      "title": "Андрій Литвин - Портфоліо",
+      "description": "Я розробник/дизайнер з України. Цікавлюся .NET та JS, а також UI/UX дизайном.",
+      "author": "Aндрій Литвин"
+    },
     "shared": {
       "sectionNames": {
         "projects": "Проєкти",

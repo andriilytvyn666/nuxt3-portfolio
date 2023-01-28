@@ -1,19 +1,17 @@
 <template>
-  <PageWrapper>
+  <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-8">
-      <div class="flex flex-col gap-8">
-        <div class="flex flex-col gap-6">
-          <SectionAboutMe :contacts="store.contactsOpen" />
-          <SectionContacts v-show="store.contactsOpen" />
-          <SectionSkills :grid="store.grid" v-show="!store.contactsOpen" />
-        </div>
-        <SectionProjects />
-        <SectionExperience />
-        <SectionCourses />
-        <SectionEducation />
+      <div class="flex flex-col gap-6">
+        <SectionAboutMe :contacts="store.contactsOpen" />
+        <SectionContacts v-show="store.contactsOpen" />
+        <SectionSkills :grid="store.grid" v-show="!store.contactsOpen" />
       </div>
+      <SectionProjects />
+      <SectionExperience />
+      <SectionCourses />
+      <SectionEducation />
     </div>
-  </PageWrapper>
+  </div>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,10 @@
 {
   "landing": {
+    "meta": {
+      "title": "Andrii Lytvyn - Portfolio",
+      "description": "I am a developer/designer from Ukraine. I am interested in .NET and JS, as well as UI/UX design",
+      "author": "Andrii Lytvyn"
+    },
     "shared": {
       "sectionNames": {
         "projects": "Projects",
