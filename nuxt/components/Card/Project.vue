@@ -1,6 +1,10 @@
 <template>
   <div class="card-project">
-    <nuxt-img :src="props.image" class="max-h-[9.813rem] h-full" />
+    <nuxt-img
+      :src="props.image"
+      :alt="props.name"
+      class="max-h-[9.813rem] h-full max-w-[17.375rem] w-full"
+    />
     <div class="card-project-bottom">
       <div class="flex flex-col overflow-hidden">
         <span class="text-xl truncate text-light">{{ props.name }}</span>

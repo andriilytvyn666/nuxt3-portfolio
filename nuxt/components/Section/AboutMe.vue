@@ -7,7 +7,8 @@
     >
       <nuxt-img
         :src="about.photo.asset._ref"
-        class="rounded-[0.313rem] max-w-min h-[16rem]"
+        :alt="getLocalizedString($i18n.locale, about.name)"
+        class="rounded-[0.313rem] max-w-min w-full h-[16rem]"
       />
       <div class="flex flex-col justify-between flex-grow">
         <div class="flex flex-col gap-6">
@@ -18,8 +19,8 @@
             <span class="flex items-center gap-2 text-light-unfocused">
               <nuxt-img
                 :src="about.locationFlag.asset._ref"
-                alt="Ukraine Flag"
-                class="h-6"
+                :alt="getLocalizedString($i18n.locale, about.location)"
+                class="w-6 h-6"
               />
               {{ getLocalizedString($i18n.locale, about.location) }}
             </span>
@@ -81,7 +82,7 @@ const props = defineProps<{
 
 const store = useLandingStore()
 const { locale } = useI18n()
-
+// TODO: move fetching code in separate function to avoid duplication
 const query: string = groq`*[_type == "about"]
 {_id, photo, name, location, locationFlag, description}`
 

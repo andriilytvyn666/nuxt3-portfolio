@@ -1,7 +1,7 @@
 <template>
   <div class="card-skill">
     <div class="flex flex-col items-center gap-2">
-      <nuxt-img :src="props.logo" class="w-16 h-16" alt="skillNuxt" />
+      <nuxt-img :src="props.logo" :alt="props.title" class="w-16 h-16" />
       <div class="flex flex-col gap-1 pb-1 text-center text-light">
         <span class="text-xl font-bold leading-6">{{ title }}</span>
         <span class="text-sm font-medium leading-5 text-light-unfocused">{{

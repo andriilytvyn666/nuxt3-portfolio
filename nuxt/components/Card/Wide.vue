@@ -3,6 +3,7 @@
     <div class="flex gap-[0.875rem] items-center overflow-hidden">
       <nuxt-img
         :src="props.logo"
+        :alt="props.title"
         class="w-[3rem] h-[3rem] rounded-[0.313rem]"
       />
       <div
