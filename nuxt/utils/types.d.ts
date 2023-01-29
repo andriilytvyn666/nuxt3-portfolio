@@ -4,6 +4,7 @@ type Course = {
   name: string
   provider: string
   completionDate: string
+  certificate: file
 }
 
 type Education = {
@@ -45,6 +46,7 @@ type Contact = {
   logo: image
   name: string
   contact: string
+  link: string | null
 }
 
 type About = {
@@ -54,6 +56,7 @@ type About = {
   location: localeString
   locationFlag: image
   description: localeString
+  dreyfus: file
 }
 
 type localeString = {
@@ -62,5 +65,9 @@ type localeString = {
 }
 
 type image = {
+  asset: { _ref: string }
+}
+
+type file = {
   asset: { _ref: string }
 }

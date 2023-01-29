@@ -37,5 +37,12 @@ export default {
       type: 'localeString',
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: 'dreyfus',
+      type: 'file',
+      title: 'Dreyfus model PDF',
+      options: { accepts: 'application/pdf' },
+      validation: (rule: Rule) => rule.required(),
+    },
   ],
 }

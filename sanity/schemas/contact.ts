@@ -25,5 +25,10 @@ export default {
       title: 'Contact',
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: 'link',
+      type: 'url',
+      title: 'Link',
+    },
   ],
 }

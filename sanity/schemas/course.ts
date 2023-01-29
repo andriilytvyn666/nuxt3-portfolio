@@ -32,5 +32,12 @@ export default {
       title: 'Completion date',
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: 'certificate',
+      type: 'file',
+      title: 'Certificate PDF',
+      options: { accepts: 'application/pdf' },
+      validation: (rule: Rule) => rule.required(),
+    },
   ],
 }
