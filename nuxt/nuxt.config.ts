@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/tailwind.css'],
   i18n: {
+    baseUrl: 'https://andriilytvyn.pp.ua',
     defaultLocale: 'en',
     detectBrowserLanguage: {
       alwaysRedirect: true,

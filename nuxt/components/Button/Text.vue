@@ -1,12 +1,22 @@
 <template>
-  <button @click="$emit('click')" :class="getClass()">
-    <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
-    <span>{{ props.text }}</span>
-  </button>
+  <a :href="props.link" target="_blank" class="flex w-full h-full no-underline">
+    <button :name="props.name" @click="$emit('click')" :class="getClass()">
+      <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
+      <span>{{ props.text }}</span>
+    </button>
+  </a>
 </template>
 
 <script setup land="ts">
 const props = defineProps({
+  link: {
+    type: String,
+    required: false,
+  },
+  name: {
+    type: String,
+    required: true,
+  },
   text: {
     type: String,
     required: true,
@@ -26,6 +36,7 @@ const props = defineProps({
 
 defineEmits(['click'])
 
+// TODO: use conditional rendering instead os switch statement
 const getClass = () => {
   switch (props.type) {
     case 'primary':
