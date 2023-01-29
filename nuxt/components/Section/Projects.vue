@@ -13,22 +13,6 @@
         :updateDate="new Date(project.updateDate)"
         :link="project.link"
       />
-      <CardProject
-        v-for="project in projects"
-        :key="project.name"
-        :image="project.image.asset._ref"
-        :name="project.name"
-        :updateDate="new Date(project.updateDate)"
-        :link="project.link"
-      />
-      <CardProject
-        v-for="project in projects"
-        :key="project.name"
-        :image="project.image.asset._ref"
-        :name="project.name"
-        :updateDate="new Date(project.updateDate)"
-        :link="project.link"
-      />
     </div>
   </div>
 </template>
