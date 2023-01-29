@@ -4,7 +4,7 @@
       icon="feather/book"
       :title="$t('landing.shared.sectionNames.education')"
     />
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid gap-5 lg:max-2xl:grid-cols-2 2xl:grid-cols-2">
       <CardEducation
         :logo="school.logo.asset._ref"
         :schoolName="getLocalizedString($i18n.locale, school.schoolName)"

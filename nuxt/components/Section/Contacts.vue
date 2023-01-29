@@ -1,5 +1,8 @@
 <template>
-  <div class="grid grid-cols-2 gap-5" v-if="renderCondition">
+  <div
+    class="grid gap-5 lg:max-2xl:grid-cols-2 2xl:grid-cols-2"
+    v-if="renderCondition"
+  >
     <CardContact
       :link="getLink(contact)"
       :name="contact.name"

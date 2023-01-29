@@ -4,7 +4,7 @@
       icon="feather/check-square"
       :title="$t('landing.shared.sectionNames.courses')"
     />
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid gap-5 lg:max-2xl:grid-cols-2 2xl:grid-cols-2">
       <CardCourse
         :name="course.name"
         :provider="course.provider"
