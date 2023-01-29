@@ -44,5 +44,19 @@ export default {
       options: { accepts: 'application/pdf' },
       validation: (rule: Rule) => rule.required(),
     },
+    {
+      name: 'cvEn',
+      type: 'file',
+      title: 'CV PDF English',
+      options: { accepts: 'application/pdf' },
+      validation: (rule: Rule) => rule.required(),
+    },
+    {
+      name: 'cvUk',
+      type: 'file',
+      title: 'CV PDF Українська',
+      options: { accepts: 'application/pdf' },
+      validation: (rule: Rule) => rule.required(),
+    },
   ],
 }

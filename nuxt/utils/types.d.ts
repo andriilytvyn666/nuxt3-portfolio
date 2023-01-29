@@ -57,6 +57,9 @@ type About = {
   locationFlag: image
   description: localeString
   dreyfus: file
+  // TODO: define new schema to enable field based file translation
+  cvEn: file
+  cvUk: file
 }
 
 type localeString = {

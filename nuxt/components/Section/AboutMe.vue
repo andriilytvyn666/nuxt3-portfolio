@@ -41,11 +41,16 @@ TODO: split this giant component into subcomponents
         </div>
         <div class="flex flex-row min-h-[3rem]">
           <div class="flex gap-4">
-            <ButtonText
-              :text="$t('landing.aboutMe.downloadCV')"
-              icon="feather/download"
-              name="downloadCV"
-            />
+            <SanityFile :asset-id="getLocalizedFile($i18n.locale, about)">
+              <template #default="{ src }">
+                <ButtonText
+                  :text="$t('landing.aboutMe.downloadCV')"
+                  :link="src"
+                  icon="feather/download"
+                  name="downloadCV"
+                />
+              </template>
+            </SanityFile>
             <ButtonText
               :text="$t('landing.aboutMe.contactMe')"
               name="close"
@@ -94,7 +99,7 @@ const store = useLandingStore()
 const { locale } = useI18n()
 // TODO: move fetching code in separate function to avoid duplication
 const query: string = groq`*[_type == "about"]
-{_id, photo, name, location, locationFlag, description, dreyfus}`
+{_id, photo, name, location, locationFlag, description, dreyfus, cvEn, cvUk }`
 
 const { data } = await useSanityQuery<About[]>(query)
 const aboutMe = data.value
@@ -103,4 +108,9 @@ if (aboutMe !== null && aboutMe[0] !== null)
   store.setName(getLocalizedString(locale.value, aboutMe[0].name))
 
 const renderCondition: boolean = aboutMe !== null && aboutMe.length === 1
+
+const getLocalizedFile = (locale: string, about: About): string => {
+  if (locale === 'uk') return about.cvUk.asset._ref
+  return about.cvEn.asset._ref
+}
 </script>
