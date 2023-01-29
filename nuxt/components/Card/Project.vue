@@ -3,7 +3,7 @@
     <nuxt-img
       :src="props.image"
       :alt="props.name"
-      class="max-h-[9.813rem] h-full max-w-[17.375rem] w-full"
+      class="max-h-[9.813rem] h-full min-w-[17.375rem] object-cover w-full"
     />
     <div class="card-project-bottom">
       <div class="flex flex-col overflow-hidden">

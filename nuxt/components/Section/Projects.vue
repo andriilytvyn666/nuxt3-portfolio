@@ -4,7 +4,7 @@
       icon="feather/layers"
       :title="$t('landing.shared.sectionNames.projects')"
     />
-    <div class="grid grid-cols-4 gap-5">
+    <div class="grid gap-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
       <CardProject
         v-for="project in projects"
         :key="project.name"

@@ -4,7 +4,7 @@
       icon="feather/briefcase"
       :title="$t('landing.shared.sectionNames.experience')"
     />
-    <div class="grid grid-cols-2 gap-5">
+    <div class="grid gap-5 lg:max-2xl:grid-cols-2 2xl:grid-cols-2">
       <CardExperience
         :logo="experience.logo.asset._ref"
         :title="experience.title"

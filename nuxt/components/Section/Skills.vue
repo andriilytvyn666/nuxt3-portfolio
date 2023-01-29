@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-8 gap-5"
+    class="grid w-full grid-cols-3 gap-5 mx-auto sm:max-xl:w-full sm:max-xl:gap-5 xl:grid-cols-8 lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-4"
     v-if="props.grid && renderCondition && !store.contactsOpen"
   >
     <CardSkill
@@ -19,6 +19,23 @@
       class="w-full"
       :slides-per-view="8"
       :space-between="20"
+      :breakpoints="{
+        500: {
+          slidesPerView: 3,
+        },
+        640: {
+          slidesPerView: 4,
+        },
+        768: {
+          slidesPerView: 5,
+        },
+        1024: {
+          slidesPerView: 7,
+        },
+        1240: {
+          slidesPerView: 8,
+        },
+      }"
       :modules="[SwiperAutoplay]"
       :autoplay="{
         delay: 1000,

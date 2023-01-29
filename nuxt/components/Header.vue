@@ -4,14 +4,16 @@
     class="box-border sticky top-0 z-50 h-16 w-fill bg-dark-header backdrop-blur border-b-dark-border"
   >
     <div
-      class="px-1 flex justify-between items-center h-full content-center mx-auto w-[73.75rem]"
+      class="px-1 flex justify-between items-center h-full content-center mx-auto xl:w-[73.75rem] lg:w-[62rem] md:w-[46rem] sm:w-[38rem] min-[500px]:w-[29.25rem] min-[320px]:w-[20.5rem]"
     >
       <div
         class="text-light flex items-center gap-2 text-[1.656rem] leading-8 font-bold cursor-pointer"
         @click="scrollToTop"
       >
         <nuxt-icon class="text-[2rem] leading-8" name="feather/user" filled />
-        <h1>{{ $t('landing.header.logoTitle') }}</h1>
+        <h1 class="min-[320px]:max-[500px]:hidden sm:max-2xl:inline 2xl:inline">
+          {{ $t('landing.header.logoTitle') }}
+        </h1>
       </div>
       <nav class="text-light flex gap-4 text-[2rem]">
         <a

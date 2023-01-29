@@ -63,7 +63,9 @@ const getClass = () => {
 
 <style lang="postcss">
 .internal-button-text {
-  @apply flex gap-2 pr-5 pl-[1.125rem] max-w-min max-h-12 items-center;
+  @apply flex gap-2 pr-5 pl-[1.125rem] max-h-12 min-h-[3rem] items-center;
+  @apply w-full  sm:max-2xl:max-w-min 2xl:max-w-min;
+  @apply justify-center sm:max-2xl:justify-start 2xl:justify-start;
   @apply rounded-[0.313rem] text-base font-medium whitespace-nowrap;
 }
 
