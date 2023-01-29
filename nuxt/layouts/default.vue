@@ -29,6 +29,8 @@ useServerSeoMeta({
   twitterTitle: t('landing.meta.author'),
   twitterDescription: t('landing.meta.description'),
   twitterCard: 'summary_large_image',
+  ogImage: 'https://andriilytvyn.pp.ua/opengraph_image.webp',
+  twitterImage: 'https://andriilytvyn.pp.ua/opengraph_image.webp',
   // TODO: change colorScheme meta after light theme finished
   colorScheme: 'normal',
   robots: 'all noarchive',
