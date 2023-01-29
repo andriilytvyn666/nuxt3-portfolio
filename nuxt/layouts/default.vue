@@ -39,7 +39,10 @@ useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang,
   },
-  link: [...(i18nHead.value.link || [])],
+  link: [
+    ...(i18nHead.value.link || []),
+    { rel: 'icon', type: 'image/png', href: 'favicon.png' },
+  ],
   meta: [...(i18nHead.value.meta || [])],
 })
 </script>
