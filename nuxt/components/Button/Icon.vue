@@ -10,16 +10,6 @@
       <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
     </button>
   </a>
-  <!-- <div v-else>
-    <button
-      :name="props.name"
-      :aria-label="props.name"
-      @click="$emit('click')"
-      :class="getClass()"
-    >
-      <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
-    </button>
-  </div> -->
 </template>
 
 <script setup lang="ts">
