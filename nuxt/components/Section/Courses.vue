@@ -10,6 +10,7 @@
         :provider="course.provider"
         :logo="course.logo.asset._ref"
         :completionDate="new Date(course.completionDate)"
+        :certificate="course.certificate.asset._ref"
         v-for="course in courses"
         :key="course.name"
       />
@@ -18,7 +19,8 @@
 </template>
 
 <script setup lang="ts">
-const query: string = groq`*[_type == "course"] {_id, logo, name, provider, completionDate}`
+const query: string = groq`*[_type == "course"]
+{_id, logo, name, provider, completionDate, certificate}`
 const { data } = await useSanityQuery<Course[]>(query)
 
 const courses = data.value

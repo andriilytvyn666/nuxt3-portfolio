@@ -1,6 +1,11 @@
 <template>
   <CardWide :logo="props.logo" :title="props.title" :text="props.text">
-    <ButtonIcon :name="title" :icon="props.actionIcon" type="primary" />
+    <ButtonIcon
+      :link="props.actionLink"
+      :name="title"
+      :icon="props.actionIcon"
+      type="primary"
+    />
   </CardWide>
 </template>
 
@@ -10,5 +15,6 @@ const props = defineProps<{
   title: string
   text: string
   actionIcon: string
+  actionLink: string
 }>()
 </script>

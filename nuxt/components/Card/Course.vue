@@ -1,10 +1,15 @@
 <template>
-  <CardWideAction
-    :title="props.name"
-    :text="`${props.provider} ‧ ${completionDateMsg}`"
-    actionIcon="feather/file"
-    :logo="logo"
-  />
+  <SanityFile :asset-id="certificate">
+    <template #default="{ src }">
+      <CardWideAction
+        :actionLink="src"
+        :title="props.name"
+        :text="`${props.provider} ‧ ${completionDateMsg}`"
+        actionIcon="feather/file"
+        :logo="logo"
+      />
+    </template>
+  </SanityFile>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +18,7 @@ const props = defineProps<{
   name: string
   provider: string
   completionDate: Date
+  certificate: string
 }>()
 
 const { t } = useI18n()

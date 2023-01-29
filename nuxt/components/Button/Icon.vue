@@ -1,12 +1,25 @@
 <template>
-  <button
-    :name="props.name"
-    :aria-label="props.name"
-    @click="$emit('click')"
-    :class="getClass()"
-  >
-    <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
-  </button>
+  <!-- TODO: refactor this to avoid copy & paste -->
+  <a :href="props.link" target="_blank">
+    <button
+      :name="props.name"
+      :aria-label="props.name"
+      @click="$emit('click')"
+      :class="getClass()"
+    >
+      <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
+    </button>
+  </a>
+  <!-- <div v-else>
+    <button
+      :name="props.name"
+      :aria-label="props.name"
+      @click="$emit('click')"
+      :class="getClass()"
+    >
+      <NuxtIcon class="text-xl leading-5" :name="props.icon" filled />
+    </button>
+  </div> -->
 </template>
 
 <script setup lang="ts">
@@ -14,6 +27,7 @@ const props = defineProps<{
   name: string
   icon: string
   type: string
+  link?: string
 }>()
 
 defineEmits(['click'])

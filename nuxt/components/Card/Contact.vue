@@ -1,5 +1,6 @@
 <template>
   <CardWideDoubleAction
+    :secondary-link="props.link"
     :logo="props.logo"
     primary-action-icon="feather/clipboard"
     secondary-action-icon="feather/message-circle"
@@ -13,5 +14,6 @@ const props = defineProps<{
   logo: string
   name: string
   contact: string
+  link?: string
 }>()
 </script>

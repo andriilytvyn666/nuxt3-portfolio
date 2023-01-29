@@ -1,3 +1,4 @@
+TODO: split this giant component into subcomponents
 <template>
   <div v-if="renderCondition">
     <div
@@ -64,11 +65,16 @@
           </div>
           <div class="grow"></div>
           <div class="flex gap-4" v-if="!store.contactsOpen">
-            <ButtonText
-              :text="$t('landing.aboutMe.aboutSkillLevels')"
-              name="aboutSkillLevels"
-              icon="feather/info"
-            />
+            <SanityFile :asset-id="about.dreyfus.asset._ref">
+              <template #default="{ src }">
+                <ButtonText
+                  :text="$t('landing.aboutMe.aboutSkillLevels')"
+                  :link="src"
+                  name="aboutSkillLevels"
+                  icon="feather/info"
+              /></template>
+            </SanityFile>
+
             <ButtonGroup iconLeft="feather/columns" iconRight="feather/grid" />
           </div>
         </div>
@@ -88,7 +94,7 @@ const store = useLandingStore()
 const { locale } = useI18n()
 // TODO: move fetching code in separate function to avoid duplication
 const query: string = groq`*[_type == "about"]
-{_id, photo, name, location, locationFlag, description}`
+{_id, photo, name, location, locationFlag, description, dreyfus}`
 
 const { data } = await useSanityQuery<About[]>(query)
 const aboutMe = data.value

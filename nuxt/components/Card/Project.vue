@@ -14,6 +14,7 @@
       </div>
       <!-- TODO: Add action on click -->
       <ButtonIcon
+        :link="props.link"
         :name="`${props.name}-open`"
         class="shrink-0"
         icon="feather/arrow-right"
