@@ -5,6 +5,9 @@
       "description": "Я розробник/дизайнер з України. Цікавлюся .NET та JS, а також UI/UX дизайном.",
       "author": "Aндрій Литвин"
     },
+    "workExperience": {
+      "present": "Тепер"
+    },
     "shared": {
       "sectionNames": {
         "projects": "Проєкти",

@@ -12,6 +12,10 @@
     font-smooth: never;
   }
 
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
   body {
     @apply bg-dark;
   }

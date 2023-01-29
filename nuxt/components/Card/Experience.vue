@@ -24,8 +24,7 @@ const beginMsg = `${t(
 // TODO: refactor message generation
 const endMsg = () => {
   if (props.dateOfDismissal.getTime() === 0) {
-    // TODO: add localization
-    return 'Present'
+    return t('landing.workExperience.present')
   }
 
   return `${t(

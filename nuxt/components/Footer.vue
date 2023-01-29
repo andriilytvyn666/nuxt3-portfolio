@@ -8,7 +8,9 @@
       <div class="flex flex-col text-sm text-light-unfocused">
         <span>{{ `Copyright © 2023 ${store.name}` }}</span>
         <a
-          class="text-light-unfocused hover:text-light"
+          class="text-light-unfocused hover:text-light w-fit"
+          aria-label="CC BY-NC-SA 4.0"
+          target="_blank"
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           >CC BY-NC-SA 4.0</a
         >

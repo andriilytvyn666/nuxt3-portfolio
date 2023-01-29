@@ -5,6 +5,9 @@
       "description": "I am a developer/designer from Ukraine. I am interested in .NET and JS, as well as UI/UX design",
       "author": "Andrii Lytvyn"
     },
+    "workExperience": {
+      "present": "Present"
+    },
     "shared": {
       "sectionNames": {
         "projects": "Projects",

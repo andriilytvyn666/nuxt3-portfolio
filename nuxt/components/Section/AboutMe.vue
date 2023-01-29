@@ -9,7 +9,7 @@ TODO: split this giant component into subcomponents
       <nuxt-img
         :src="about.photo.asset._ref"
         :alt="getLocalizedString($i18n.locale, about.name)"
-        class="rounded-[0.313rem] max-w-min w-full h-[16rem]"
+        class="rounded-[0.313rem] max-w-min w-[12.434rem] h-[16rem]"
       />
       <div class="flex flex-col justify-between flex-grow">
         <div class="flex flex-col gap-6">
