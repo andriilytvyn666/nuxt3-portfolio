@@ -8,7 +8,12 @@
       class="xl:w-[73.75rem] lg:w-[62rem] md:w-[46rem] sm:w-[38rem] min-[320px]:w-[20.5rem] min-[500px]:w-[29.25rem] flex px-2 mx-auto justify-between items-center h-full"
     >
       <div class="flex flex-col text-sm text-light-unfocused">
-        <span>{{ `Copyright © 2023 ${store.name}` }}</span>
+        <span>{{
+          `Copyright © 2023 ${getLocalizedString(
+            $i18n.locale,
+            store.about.name
+          )}`
+        }}</span>
         <a
           class="text-light-unfocused hover:text-light w-fit"
           aria-label="CC BY-NC-SA 4.0"

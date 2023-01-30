@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid w-full grid-cols-3 gap-5 mx-auto sm:max-xl:w-full sm:max-xl:gap-5 xl:grid-cols-8 lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-4"
+    class="grid w-full grid-cols-3 gap-5 mx-auto sm:max-xl:w-full sm:max-xl:gap-5 xl:grid-cols-8 lg:grid-cols-7 md:grid-cols-5 sm:grid-cols-4 min-[0px]:max-sm:grid-cols-2 min-[0px]:max-sm:gap-16"
     v-if="props.grid && renderCondition && !store.contactsOpen"
   >
     <CardSkill
