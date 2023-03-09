@@ -1,6 +1,7 @@
 <template>
   <div
     class="h-screen min-[0px]:max-[500px]:flex min-[500px]:max-2xl:hidden 2xl:hidden items-center justify-center p-16 gap-4 flex-col"
+    v-motion-fade-visible-once
   >
     <span class="text-light text-xl font-medium">(｡╯︵╰｡)<br /></span>
     <!-- <nuxt-icon class="text-light text-4xl" name="feather/x" filled /> -->
@@ -22,6 +23,7 @@
   </div>
   <div
     class="flex flex-col items-stretch flex-grow min-h-screen min-[0px]:max-[499px]:hidden"
+    v-motion-fade-visible-once
   >
     <Header />
     <article

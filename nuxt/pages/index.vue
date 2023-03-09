@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-8" v-motion-fade-visible-once>
+  <div class="flex flex-col gap-8">
     <div class="flex flex-col gap-16">
       <div class="flex flex-col gap-8">
         <SectionAboutMe :contacts="store.contactsOpen" />
