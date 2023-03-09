@@ -48,5 +48,6 @@ const monthName = t(`landing.shared.months[${props.updateDate.getMonth()}]`)
 .card-project-bottom {
   @apply max-h-[4.438rem] py-[0.594rem] px-[0.875rem];
   @apply flex items-center justify-between gap-2;
+  @apply border-t border-dark-border;
 }
 </style>

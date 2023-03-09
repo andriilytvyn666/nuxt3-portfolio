@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image-edge',
     '@pinia/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/sanity',
   ],
   image: {
